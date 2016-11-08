@@ -1,0 +1,137 @@
+#main{
+    width:1920px;
+    background: #111;
+    font-size:18px;
+    color:#eee;
+}
+a{
+    color:#bbb;
+}
+a:hover{
+    color:#eee;
+}
+.wrapper{
+    width:1400px;
+    margin:0 auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.wrapper>p{
+    font-size:16px;
+    padding:30px 0;
+}
+.title{
+    overflow: hidden;
+}
+.title h3{
+    float:left;
+    width:631px;
+    text-align:center;
+    margin-bottom: 20px;
+}
+.title p{
+    float:left;
+    margin-left:50px;
+}
+.title p span{
+    margin-right:20px;
+}
+.banner { float:left;position: relative; overflow: auto; text-align: center;}
+.banner li { list-style: none; }
+.banner ul { overflow: hidden}
+.banner ul li { float: left; }
+#b05 { width:631px;}
+#b05 .dots { position: absolute; left: 0;right: 0;bottom:10px;}
+#b05 .dots li
+{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 18px;
+    text-indent: -999em;
+    border-radius:50%;
+    cursor: pointer;
+    background:#eee;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+#b05 .dots li.active
+{
+    background: #fef201;
+    opacity: 1;
+}
+.btngroup{
+    position:relative;
+    width:380px;
+    height:25px;
+}
+.collect{
+    display:inline-block;
+    width:74px;
+    height:25px;
+    background:url("../img/artifact/details/icon.png") no-repeat;
+}
+.share{
+    display:inline-block;
+    margin-left:20px;
+    width:74px;
+    height:25px;
+    background:url("../img/artifact/details/icon.png") -84px 0 no-repeat;
+}
+/*分享样式*/
+.bdsharebuttonbox{
+    padding:0 7px;
+    border:2px solid #ccc;
+    background:#fff;
+    display:none;
+    width:122px;
+    height:112px;
+    position:absolute;
+    left:191px;
+    top:-5px;
+    z-index:100;
+}
+.bdsharebuttonbox a{
+    display:inline-block;
+    width:99px;
+    height:30px;
+    color:#000;
+}
+bdshare_weixin_qrcode_dialog_qr{
+    height:200px;
+}
+.msg{
+    float:left;
+    width:500px;
+    margin-left:50px;
+}
+.msg>div>p{
+    width:130px;
+    height:30px;
+    text-align:center;
+    background:#4b4b4b;
+}
+.msg>div>p span{
+    line-height:30px;
+}
+.txt{
+    padding:30px 40px;
+    background:#1b1b1b;
+}
+.txt p{
+    font-size:14px;
+    text-indent: 32px;
+}
+.txt table{
+    font-size:16px;
+}
+.txt table tbody tr{
+    height:50px;
+}
+.txt table tbody tr td:nth-child(2){
+    width:180px;
+}
+.txt p{
+    line-height:24px;
+}

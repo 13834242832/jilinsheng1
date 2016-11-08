@@ -1,0 +1,165 @@
+#main{
+    width:1920px;
+    background: #1b1b1b;
+    font-size:18px;
+    color:#eee;
+}
+#main a{
+    color:#bbb;
+}
+#main a:hover{
+    color:#eee;
+}
+.top{
+    height:107px;
+    display: table-cell;
+    vertical-align: bottom;
+    color:#fff;
+    width:1920px;
+    border-bottom: 2px solid #464646;
+}
+.top p{
+    float:left;
+    margin-left:212px;
+    font-size:20px;
+}
+.top h3{
+    float:left;
+    letter-spacing:20px;
+    margin-left:522px;
+    font-size:24px;
+}
+.top h4{
+    float:left;
+    margin-left:462px;
+    margin-right:20px;
+}
+.top button{
+    float:left;
+    outline: none;
+    border:none;
+    width:87px;
+    height:22px;
+    font-size:12px;
+    border-radius: 11px;
+    color:#fff;
+    background:#8e0508;
+    font-family:微软雅黑, Helvetica, Arial, sans-serif;
+}
+.title{
+    width:244px;
+    height:44px;
+    border:none;
+    border-radius:3px;
+    background:#ad9d86;
+    margin-left: 208px;
+    font-size: 20px;
+}
+.title i{
+    display:inline-block;
+    position:relative;
+    top:2px;
+    width:25px;
+    height:18px;
+    margin-left:42px;
+    background:url("../img/icon.png") 50% 10% no-repeat;
+}
+.title span{
+    margin-left:20px;
+    line-height:44px;
+}
+.content{
+    background:#313131;
+    margin-top:54px;
+    border-bottom:1px solid #242424;
+}
+.content_msg{
+    margin-top:40px;
+    margin-left:534px;
+}
+.line{
+    float:left;
+    height:28px;
+    width:88px;
+    font-size:16px;
+    padding-right:23px;
+    padding-top:6px;
+    border-right:1px solid #242424;
+}
+.row_msg{
+    overflow: hidden;
+    position:relative;
+}
+.row_msg h5{
+    display:none;
+    position:absolute;
+    left:440px;
+    top:5px;
+    font-weight:normal;
+    font-size:12px;
+    color:#d7bf79;
+}
+.row_msg p{
+    position:absolute;
+    font-size:12px;
+    width:300px;
+    left:570px;
+    top:5px;
+    color:#a6a6a6;
+}
+.row_inpt{
+    float:left;
+    height:34px;
+    display:inline-block;
+    border-left:1px solid #444444;
+    margin-bottom: 20px;
+}
+.row_inpt input[type=text],.row_inpt input[type=password],.row_inpt select{
+    outline: none;
+    width:280px;
+    height:30px;
+    color:#fff;
+    font-family:微软雅黑;
+    border:1px solid #57442e;
+    border-radius: 3px;
+    margin-left:20px;
+    font-size:18px;
+    background:#313131;
+}
+.row_inpt input[type=radio]{
+    margin-left:20px;
+}
+.user_msg{
+    border-top:1px solid #454545;
+    background:#313131;
+    padding-bottom:70px;
+    padding-top:20px;
+    margin-bottom: 100px;
+}
+.check_box{
+    margin-left:100px;
+    font-size:12px;
+}
+.notice{
+    margin-left:522px;
+    margin-top:20px;
+    width:500px;
+    font-size:16px;
+}
+.btn{
+    display:inline-block;
+    width:216px;
+    height:50px;
+    cursor: pointer;
+    font-size:20px;
+    border-radius:25px;
+    border:none;
+    outline: none;
+    text-align: center;
+    margin-left:146px;
+    margin-top:50px;
+    background:#910303;;
+}
+.btn span{
+    line-height:50px;
+}

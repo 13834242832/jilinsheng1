@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文创产品详情页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/artifact_details.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div id="main">
+    <div class="wrapper">
+        <p><span>当前位置：</span><a href="index.html">首页</a>&gt;<a href="artifact.html?CLASS=全部">文创产品</a>&gt;<span>文创产品详情</span></p>
+        <div class="title">
+            <h3>中国风彩绘丝绸鼠标垫</h3>
+        </div>
+        <div class="banner" id="b05">
+            <ul>
+            </ul>
+        </div>
+
+        <div class="msg">
+            <div class="msg2">
+                <div class="btngroup">
+                    <span class="collect"></span>
+                    <span class="share"></span>
+                    <div class="bdsharebuttonbox" data-tag="share_1">
+                        <a class="bds_qzone" data-cmd="qzone" id="qq">qq空间</a>
+                        <a class="bds_tsina" data-cmd="tsina" id="sina">新浪微博</a>
+                        <a class="bds_weixin" data-cmd="weixin" id="weixin">微信</a>
+                    </div>
+                </div>
+                <p style="margin-top:30px"><span>产品简介</span></p>
+                <div class="txt">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>材质：</td>
+                                <td></td>
+                                <td>类别：</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>价格：</td>
+                                <td><span></span>元</td>
+                                <td>尺寸：</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>来源：</td>
+                                <td colspan="3"></td>
+                        </tbody>
+                    </table>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+<script src="js/unslider.min.js"></script>
+<script>
+    $("#header").load("include/head.html",function(){
+        $("#nav ul li:nth-child(5)").addClass("navactived").siblings().removeClass('navactived')
+    });
+    $("#footer").load("include/footer.html");
+</script>
+<script type="text/javascript" src="http://www.coding123.net/getip.ashx?js=1"></script>
+<script src="layer/layer.js"></script>
+<script src="js/artifact_details.js"></script>
+</body>
+</html>

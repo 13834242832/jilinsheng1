@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更多历史</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/history_more.css">
+</head>
+<body>
+<div id="header"></div>
+<div id="main"><a href="" target="_blank" t></a>
+    <div class="wrapper">
+        <p><span>当前位置：<a href="index.html">首页</a>&gt;<a href="history.html">历史吉林</a>&gt;更多历史</span></p>
+        <div class="section1">
+            <div class="part1">
+                <button class="active">非物质文化遗产</button>
+                <button>地域文化</button>
+            </div>
+            <div class="part2">
+                <div><input type="search" placeholder="按标题检索" id="searchtxt"><label for="searchtxt"><span>检索</span></label></div>
+                <div><input type="search" placeholder="按时间检索" id="searchtime"><label for="searchtime"><span>检索</span></label></div>
+            </div>
+        </div>
+        <div class="section2">
+            <p><span></span></p>
+            <div class="table_content">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="pager">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $("#header").load("include/head.html",function(){
+        $("#nav ul li:last-child").addClass("navactived").siblings().removeClass('navactived');
+    });
+    $("#footer").load("include/footer.html");
+</script>
+<script src="js/jquery.pager.js"></script>
+<script src="js/history_more.js"></script>
+</body>
+</html>

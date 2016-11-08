@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更多虚拟博物馆</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/digitization_museum_more.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery.pager.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="section1">
+            <p><span>当前位置：<a href="index.html">首页</a>&gt;<a href="digitization.html">数字博物馆</a>&gt;<span>虚拟展厅</span></p>
+            <div class="group0 common">
+                <div class="item"><span>按来源：</span></div>
+                <div class="right">
+                    <ul class="clas-content" id="gp1">
+                        <li><a href="" class="active ly">全部</a></li>
+                    </ul>
+                    <span class="more">更多 <span class="">&gt;</span></span>
+                </div>
+            </div>
+            <div class="group1 common">
+                <div class="item"><span>按类型：</span></div>
+                <div class="right">
+                    <ul class="clas-content" id="gp2">
+                        <li><a href="" class="active lx">全部</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="group4 common">
+                <div class="item">
+                    <span>关键词：</span>
+                    <input type="text"><p class="search" id="btnsearch">查询</p>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="modultop">
+                <p>共<span></span>条信息</p>
+                <div class="bottom">
+                    <div class="year criteria">
+                        <span>热度</span><u class="sort0"></u>
+                    </div>
+                    <div class="time criteria">
+                        <span>时间</span><u class="sort0"></u>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <ul class="img_list">
+                    <!--<li data-treasure="0">-->
+                        <!--<a href="digitization_details.html">-->
+                            <!--<img src="img/digitization/more_museum/recommend2.png" width="208px" height="154px">-->
+                            <!--<p><span>吉林省虚拟博物馆</span></p>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="pager">
+
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("include/head.html",function(){
+            $("#nav ul li:nth-child(3)").addClass("navactived").siblings().removeClass('navactived');
+        });
+        $("#footer").load("include/footer.html");
+        $(".pager").pager({
+            pageIndex:0,
+            pageSize:18,
+            itemCount:24,
+            maxButtonCount:7,
+        });
+    </script>
+    <script src="js/digitization_museum_more.js"></script>
+</body>
+</html>

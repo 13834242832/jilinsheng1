@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展览详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index_showdetails.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="wrapper">
+            <p><span>当前位置：<a href="index.html">首页</a>&gt;展览详情</span></p>
+            <div class="picture">
+                <img src="" width="1300px" height="280px">
+            </div>
+            <div class="section">
+                <div class="message">
+                    <p><span>展览信息</span></p>
+                    <table>
+                        <tr>
+                            <td>展览：</td>
+                            <td>故宫主题巡回展吉林站</td>
+                            <td>展期：</td>
+                            <td></td>
+                            <td>地点：</td>
+                            <td></td>
+                            <td>票务：</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p><span>展览介绍</span></p>
+                    <div class="text" style="padding:20px;">
+                        <!--<img src="img/information/index_showdetails/组-28.png" width="430px" height="270px" style="float:left;margin-right:30px;margin-bottom: 7px">-->
+                        <!--<p style="text-indent: 39px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dolor et eum eveniet expedita laudantium magnam minima odit provident quam quas quasi quo recusandae soluta sunt tempora, tempore.</p>-->
+                        <!--<p style="text-indent: 39px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dolor et eum eveniet expedita laudantium magnam minima odit provident quam quas quasi quo recusandae soluta sunt tempora, tempore.</p>-->
+                        <!--<p style="text-indent: 39px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dolor et eum eveniet expedita laudantium magnam minima odit provident quam quas quasi quo recusandae soluta sunt tempora, tempore.</p>-->
+                        <!--<p style="text-indent: 39px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dolor et eum eveniet expedita laudantium magnam minima odit provident quam quas quasi quo recusandae soluta sunt tempora, tempore.</p>-->
+                        <!--<p style="text-indent: 39px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dolor et eum eveniet expedita laudantium magnam minima odit provident quam quas quasi quo recusandae soluta sunt tempora, tempore.</p>-->
+                        <!--<p style="text-indent: 39px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dolor et eum eveniet expedita laudantium magnam minima odit provident quam quas quasi quo recusandae soluta sunt tempora, tempore.</p>-->
+                        <!--<p style="text-indent: 39px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dolor et eum eveniet expedita laudantium magnam minima odit provident quam quas quasi quo recusandae soluta sunt tempora, tempore.</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $("#header").load("include/head.html",function(){
+            $("#nav ul li:nth-child(6)").addClass("navactived").siblings().removeClass('navactived');
+        });
+        $("#footer").load("include/footer.html");
+    </script>
+    <script src="js/show_details.js"></script>
+</body>
+</html>

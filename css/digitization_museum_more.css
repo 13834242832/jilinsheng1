@@ -1,0 +1,263 @@
+#main{
+    width:1920px;
+    background:#000;
+    font-size:20px;
+    color:#eee;
+}
+a{
+    color:#bbb;
+}
+a:hover{
+    color:#eee;
+}
+.active{
+    color:#eee;
+}
+.section1{
+    width:1400px;
+    margin:0 auto;
+    padding-bottom: 25px;
+    border-bottom: 3px solid #eee;
+}
+.section1>p{
+    height:50px;
+}
+.section1>p span{
+    line-height:50px;
+}
+.common{
+    font-size:20px;
+    color:#fff;
+    width:1400px;
+    overflow: hidden;
+}
+.common .item{
+    height:50px;
+    float:left;
+}
+
+.common .item span{
+    line-height:50px;
+}
+.common .item span span{
+    padding-left:80px;
+}
+.clas-content{
+    float:left;
+    width:1096px;
+    height:50px;
+    margin-left: 73px;
+    overflow: hidden;
+}
+.auto{
+    height:auto;
+}
+
+.clas-content li{
+    float:left;
+    height:50px;
+    margin-right:48px;
+    margin-bottom:18px;
+}
+.right{
+    position:relative;
+}
+.clas-content li a{
+    line-height:50px;
+}
+.common .more{
+    text-align:right;
+    line-height:50px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    cursor: hand;
+}
+.more span{
+    transform:rotate(0deg);
+    transition:transform 0.3s linear;
+}
+.common .more:hover{
+    cursor: pointer;
+}
+.more .btn{
+    display:inline-block;
+    transform: rotate(90deg);
+}
+/*.group4{*/
+/*margin-bottom: 44px;*/
+/*}*/
+.group4 input {
+    width:200px;
+    height:35px;
+    font-size:20px;
+    color:#fff;
+    padding:0px;
+    margin-left:80px;
+    background:#1b1b1b;
+    border:1px solid #eee;
+    border-radius: 5px;
+
+}
+.search{
+    display:inline-block;
+    width:100px;
+    height:35px;
+    line-height: 35px;
+    border:1px solid #eee;
+    background:#000;
+    margin-left:20px;
+    text-align:center;
+    position:relative;
+    right:0px;
+    top:1px;
+    border-radius:5px;
+}
+/*、、、、、、、、*/
+.section2{
+    width:1400px;
+    height:780px;
+    margin:0 auto;
+}
+.modultop{
+    width:1390px;
+    height:45px;
+    padding:5px;
+    color:#fff;
+    border-bottom: 3px solid #fff;
+}
+.modultop p{
+    font-size:20px;
+    float:left;
+    line-height:45px;
+    padding-right:44px;
+}
+.modultop .bottom{
+    float:right;
+    position:relative;
+    top:8px;
+    overflow: hidden;
+}
+.criteria{
+    float:left;
+    height:28px;
+    width:111px;
+    background:#1B1B1B;
+    border:1px solid #eee;
+    border-radius:4px;
+    letter-spacing:15px;
+    margin-left:22px;
+}
+.criteria span{
+    display: inline-block;
+    line-height:28px;
+    vertical-align: top;
+    margin-left:17px;
+}
+.criteria u{
+    display:inline-block;
+    width:23px;
+    height:28px;
+    border-radius:0 4px 4px 0;
+    border-left:1px solid #eee;
+    background: url("../img/datas/sort-icon.jpg") no-repeat;
+}
+.criteria u.sort1{
+    background: url("../img/datas/sort-icon.jpg") -23px no-repeat;
+}
+
+.content{
+    width:1550px;
+    height:623px;
+    padding-top:35px;
+    overflow:hidden;
+}
+.img_list li{
+    float:left;
+    position:relative;
+    width:208px;
+    height:152px;
+    margin-right:30px;
+    margin-bottom:38px;
+}
+.img_list li:nth-child(6){
+    margin-right:0;
+}
+.img_list li:last-child{
+    margin-right:0;
+}
+.img_list li p{
+    display:inline-block;
+    text-align: center;
+    width:208px;
+    height:32px;
+    left:0px;
+    font-size:18px;
+    color:#eee;
+    background:rgba(0,0,0,.5);
+    position:absolute;
+    bottom:-2px;
+}
+.img_list li p span{
+    line-height:32px;
+    width:200px;
+    display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+/*分页样式*/
+.pager {
+    display: inline-block;
+    height:32px;
+    font-size:20px;
+    position:relative;
+    left:50%;
+    -webkit-transform:translate(-50%,0);
+    -moz-transform: translate(-50%,0) ;
+    -ms-transform: translate(-50%,0) ;
+    -o-transform: translate(-50%,0) ;
+    transsform: translate(-50%,0) ;
+}
+
+.pager .flip{
+    display: inline-block;
+    width:68px;
+    height:30px;
+    text-align: center;
+    border:2px solid #fff;
+    border-radius: 5px;
+
+}
+
+.pager .curPage {
+    text-decoration: underline;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color:#fff;
+    margin-left:20px;
+}
+.pager span{
+    margin-left:20px;
+}
+.pager a {
+    background:#000;
+    color: #fff;
+    text-decoration: none;
+    width:26px;
+    margin-left:20px;
+}
+
+.pager .noPage {
+    color:#666;
+    border-color: #666;
+    margin-left:20px;
+}
+.pager input{
+    background:#000;
+    color:#fff;
+    font-size:18px;
+    margin-left:30px;
+}
+
+
+/*分页样式结束*/

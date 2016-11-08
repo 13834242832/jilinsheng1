@@ -1,0 +1,115 @@
+*{
+    -webkit-box-sizing: content-box;
+}
+#main{
+    width:1920px;
+    height:616px;
+    background: #1b1b1b;
+    font-size:18px;
+    color:#eee;
+}
+#main a{
+    color:#bbb;
+}
+#main a:hover{
+    color:#eee;
+}
+.wrapper{
+    width:1400px;
+    height:744px;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.wrapper>p{
+    height:25px;
+    font-size:16px;
+    padding:15px 0;
+    color:#eee;
+}
+.content{
+    width:500px;
+    height:400px;
+    margin:0 auto;
+    margin-top:60px;
+    margin-left:660px;
+}
+.msg tr{
+    height:80px;
+}
+.msg tr td{
+    position:relative;
+}
+.msg tr td p{
+    width:162px;
+    display:none;
+    font-size:14px;
+    text-align: center;
+    color:#ff0000;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+}
+.msg tr td:nth-child(2),.msg tr td:nth-child(3){
+    width:190px;
+}
+ .msg select,.msg input{
+     outline: none;
+     width:160px;
+     height:30px;
+     border:1px solid #999;
+     border-radius: 4px;
+     background:#1b1b1b;
+     color:#999;
+     font-size:16px;
+     padding:0px;
+     font-family:微软雅黑;
+ }
+ .msg input{
+     padding-left:10px;
+ }
+ .panel-heading{
+     text-align: center;
+ }
+ .content form>input{
+     float:right;
+     margin-right:48px;
+     width:100px;
+     height:30px;
+     text-align: center;
+     border:none;
+     outline: none;
+     background:#ccc;
+     color:#999;
+     border-radius: 4px;
+     font-size:16px;
+     font-family:微软雅黑;
+ }
+ #adduser{
+     position:absolute;
+     border:none;
+     right:190px;
+     top:382px;
+     color:#b5b5b5;
+     background:transparent;
+ }
+#adduser:hover{
+    color:#fff;
+}
+.panel{
+    background:transparent;
+    position:absolute;
+    left:100px;
+    top:138px;
+    width:474px;
+    height:300px;
+}
+.panel-body{
+    font-size:16px;
+}
+.panel-body ol li {
+    margin-top:20px;
+}
+#submit{
+    cursor:pointer;
+}

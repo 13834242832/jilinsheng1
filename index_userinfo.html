@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index_userinfo.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="wrapper">
+            <div class="wrapper">
+                <p><span class="line">当前位置</span><span>个人信息</span></p>
+                <div class="content">
+                    <div class="userbase">
+                        <div class="title">
+                            <i></i>
+                            <span>基本信息</span>
+                        </div>
+                        <div class="infocontent">
+                            <table cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="line">用户昵称</td>
+                                        <td style="padding-left:14px" class="sname"></td>
+                                        <td class="line">电子邮箱</td>
+                                        <td style="padding-left:14px" class="usermail"></td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td class="line">真实姓名</td>
+                                        <td style="padding-left:14px" class="realname"></td>
+                                        <td class="line">性别</td>
+                                        <td style="padding-left:14px" class="sex"></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="line">出生日期</td>
+                                        <td style="padding-left:14px" class="birthday"></td>
+                                        <td class="line">身份证号</td>
+                                        <td style="padding-left:14px" class="idnum"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line">职业</td>
+                                        <td style="padding-left:14px" class="job"></td>
+                                        <td class="line">用户标签</td>
+                                        <td style="padding-left:14px" class="label1"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="userbase_btn">编辑信息</button>
+                    </div>
+                    <div class="userbase_xg" style="display: none">
+                        <div class="title">
+                            <i></i>
+                            <span>基本信息</span>
+                        </div>
+                        <div class="infocontent_xg">
+                            <table cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="line">用户昵称</td>
+                                        <td><input type="text" name="sname" readonly></td>
+                                        <td class="line">职业</td>
+                                        <td><input type="text" name="job"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line">真实姓名</td>
+                                        <td><input type="text" name="realname"></td>
+                                        <td class="line">身份证号</td>
+                                        <td><input type="text" name="idnum"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line">出生日期</td>
+                                        <td><input type="text" name="birthday" id="date"></td>
+                                        <td class="line">性别</td>
+                                        <td><input type="radio"  value="男" name="sex">男 <input type="radio" value="女" name="sex">女</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line">电子邮箱</td>
+                                        <td><input type="text" name="usermail" readonly></td>
+                                        <td class="line">标签</td>
+                                        <td>
+                                            <select name="" id="" name="label1">
+                                                <option value="社会公众">社会公众</option>
+                                                <option value="文博爱好者">文博爱好者</option>
+                                                <option value="文博从业者">文博从业者</option>
+                                                <option value="文博研究者">文博研究者</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="userbase_xg_btn">提交</button>
+                    </div>
+                    <div class="usersafe">
+                        <div class="title">
+                            <i></i>
+                            <span>账户安全</span>
+                        </div>
+                        <div class="usersafe_content">
+                            <h5>定期修改密码，提高账户安全性</h5>
+                            <p><span>密码安全等级</span><span class="rank"></span></p>
+                        </div>
+                        <button class="pwd">修改密码</button>
+                    </div>
+                    <div class="usersafe_xg" style="display: none">
+                        <div class="title">
+                            <i></i>
+                            <span>账户安全</span>
+                        </div>
+                        <div class="usersafe_content_xg">
+                            <div>
+                                <label for="oldpwd" class="line">原密码</label>
+                                <input type="password" name="oldpwd" id="oldpwd">
+                            </div>
+                            <div>
+                                <label for="newpwd" class="line">新密码</label>
+                                <input type="password" name="newpwd" id="newpwd">
+                            </div>
+                            <div>
+                                <label for="qrpwd" class="line">确认密码</label>
+                                <input type="password" name="qrdpwd" id="qrdpwd">
+                            </div>
+                        </div>
+                        <button class="pwd_xg">提交</button>
+                    </div>
+                    <div class="appointment">
+                        <div class="title">
+                            <i></i>
+                            <span>我的预约</span>
+                        </div>
+                        <div class="appointment_content">
+                            <table cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>预约日期</th>
+                                        <th>预约博物馆</th>
+                                        <th>预约人</th>
+                                        <th>预约码</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="my_collect">
+                        <div class="title">
+                            <i></i>
+                            <span>我的收藏</span>
+                        </div>
+                        <div class="collect_content">
+                            <ul>
+                                <li class="active" data-name="cp">藏品</li>
+                                <li data-name="bwg">博物馆</li>
+                                <li data-name="xbwg">虚拟博物馆</li>
+                                <li data-name="wc">文创产品</li>
+                            </ul>
+                            <div class="list">
+                                <ul>
+                                    <!--<li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li><li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li><li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li><li>-->
+                                        <!--<a href="">-->
+                                            <!--<img src="img/img_index/111.png" width="223px" height="171px" alt="">-->
+                                            <!--<p>【展览】古代青铜器</p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                </ul>
+                                <div class="pager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("include/head.html");
+        $("#footer").load("include/footer.html");
+    </script>
+    <script src="js/jquery.pager.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="laydate/laydate.js"></script>
+    <script src="js/index_userinfo.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+#main{
+    width:1920px;
+    background:#000;
+    font-size:18px;
+    color:#eee;
+}
+#main a{
+    color:#bbb;
+}
+#main a:hover{
+    color:#eee;
+}
+.wrapper{
+    width:1390px;
+    margin:0 auto;
+    padding:10px 0;
+    overflow: hidden;
+}
+.wrapper>p{
+    height:50px;
+}
+.wrapper>p span{
+    line-height:50px;
+}
+.picture{
+    width:1300px;
+    height:280px;
+}
+.section{
+    margin-top:10px;
+}
+.section .message>p{
+    width:1300px;
+    height:50px;
+    font-size:20px;
+    border-bottom:2px solid #b5b5b5;
+}
+.section .message>p span{
+    line-height:50px;
+}
+.message{
+    width:1300px;
+}
+.message table{
+    margin:20px 0 10px 20px;
+    font-size: 16px;
+
+}
+.message table tr{
+    height:50px;
+}
+.message table tr td:nth-child(even){
+    width:263px;
+}
+.message table tr td:nth-child(2){
+    width:300px;
+    display:block;
+    padding-top:14px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.message table tr td:nth-child(6){
+    width:338px;
+}
+.message table tr td:nth-child(8){
+    width:150px;
+}
+.message table button{
+    width:120px;
+    height:36px;
+    border:2px solid #b5b5b5;
+    border-radius:4px;
+    font-size:18px;
+    font-family:微软雅黑;
+    color:#bbb;
+    background:#313131;
+    margin-left:20px;
+    outline: none;
+}
+.message h6{
+    font-size:14px;
+    font-weight: normal;
+    width:1010px;
+}
+.text{
+    width:800px;
+    margin:0 auto;
+}
+.text p{
+    line-height: 30px;
+    padding-top:10px;
+}
+.text img{
+    margin-top:20px;
+}

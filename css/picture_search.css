@@ -1,0 +1,119 @@
+#main{
+    width:1920px;
+    background: #111;
+    font-size:18px;
+    color:#eee;
+    height:930px;
+}
+#main a{
+    color:#bbb;
+}
+#main a:hover{
+    color:#eee;
+}
+.wrapper{
+    width:1400px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.wrapper>p{
+    font-size:16px;
+    padding:30px 0;
+}
+.content{
+    position:relative;
+}
+.content ul li{
+    width:130px;
+    height:160px;
+    position:absolute;
+}
+.content ul li:first-child{
+    left:315px;
+    top:318px;
+}
+.content ul li:nth-child(2){
+    left:415px;
+    top:117px;
+}
+.content ul li:nth-child(3){
+    left:620px;
+    top:18px;
+}
+.content ul li:nth-child(4){
+    left:826px;
+    top:117px;
+}
+.content ul li:nth-child(5){
+    left:924px;
+    top:318px;
+}
+.content ul li:nth-child(6){
+    left:826px;
+    top:555px;
+}
+.content ul li:nth-child(7){
+    left:620px;
+    top:610px;
+}
+.content ul li:last-child{
+    left:415px;
+    top:530px;
+}
+.content ul li p{
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    width:130px;
+    height:30px;
+    font-size:16px;
+    text-align:center;
+    background:rgba(0,0,0,.5);
+}
+.content ul li p span{
+    line-height:30px;
+}
+.bgimg{
+    width:1058px;
+    margin:0 auto;
+    height:793px;
+    background:url("../img/appreciate/pic_search/bg.png") no-repeat;
+}
+.bgimg div{
+    width:150px;
+    height: 200px;
+    position:relative;
+    left:48%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.bgimg div p{
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    width:150px;
+    height:30px;
+    font-size:16px;
+    text-align:center;
+    background:rgba(0,0,0,.5);
+}
+.bgimg div p span{
+    line-height:30px;
+}
+.search{
+    position:absolute;
+    right:100px;
+    top:0px;
+    width:200px;
+    height:40px;
+    font-size:20px;
+    text-align: center;
+    background:#5b5b5b;
+    border-radius: 4px;
+}
+.search:hover{
+    cursor: pointer;
+}
+.search span{
+    line-height: 40px;
+}

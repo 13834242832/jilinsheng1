@@ -1,0 +1,45 @@
+body{
+    font:12px '微软雅黑';
+    margin:0px;
+    padding:0px;
+    color:#666;
+    background:#000;
+}
+
+ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,p,img{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    border:none;
+    font-weight: normal;
+}
+a{text-decoration:none;color:#666;}
+input{border:none;}
+.lf   {float:left;}
+.rt  {float:right;}
+.clear {clear:both;}
+img{vertical-align:top;}
+input:focus{
+    outline:none;
+}
+textarea:focus{
+    outline:none;
+}
+
+@media screen and (max-width:1920px ) and (min-width: 1337px){
+    html{
+        font-size:22px;
+    }
+}
+
+@media screen and (max-width:1366px ) and (min-width: 1281px){
+    html{
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width:1280px ) and (min-width: 1153px){
+    html{
+        font-size:16px;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index_register.css">
+    <script src="laydate/laydate.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="top">
+            <p>当前位置：注册</p>
+            <h3>欢迎注册</h3>
+            <h4>已有账号</h4>
+            <button class="login">请&nbsp;&nbsp;登&nbsp;&nbsp;录</button>
+        </div>
+        <div class="content">
+            <div class="common account">
+                <div class="title">
+                    <i></i>
+                    <span>账号信息</span>
+                </div>
+                <div class="content_msg">
+                    <div class="row_msg">
+                        <label for="username" class="line">用户昵称</label>
+                        <div class="row_inpt">
+                            <input type="text" name="username" id="username" placeholder="请输入您的昵称" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的昵称'">
+                        </div>
+                        <h5></h5>
+                        <p>昵称可使用英文字母、数字、汉字和下划线字符的任意组合，长度在4-14个字符之间。</p>
+                    </div>
+                    <div class="row_msg">
+                        <label for="usermail" class="line">电子邮箱</label>
+                        <div class="row_inpt">
+                            <input type="text" name="usermail" id="usermail" placeholder="请输正确的电子邮箱" onfocus="this.placeholder=''" onblur="this.placeholder='请输正确的电子邮箱'">
+                        </div>
+                        <h5>asdfas</h5>
+                        <p>仅支持.com，.net，.cn，.org后缀的邮箱可以使用邮箱进行登录和找回密码</p>
+                    </div>
+                    <div class="row_msg">
+                        <label for="userpwd" class="line">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                        <div class="row_inpt">
+                            <input type="password" name="userpwd" id="userpwd" placeholder="请输入您的昵称" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的昵称'">
+                        </div>
+                        <h5>assadfasdfasdfdfa</h5>
+                        <p>8-18位字符，可包含数字、字母，字母区分大小写</p>
+                    </div>
+                    <div class="row_msg">
+                        <label for="qrpwd" class="line">确认密码</label>
+                        <div class="row_inpt">
+                            <input type="password" name="qrpwd" id="qrpwd" placeholder="请输入您的昵称" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的昵称'">
+                        </div>
+                        <h5>密码不一致</h5>
+                        <p>请再次确认输入的密码</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="common user_msg">
+            <div class="title">
+                <i></i>
+                <span>个人信息</span>
+            </div>
+            <p class="notice">注：个人信息不是必填项，您可以直接提交注册</p>
+            <div class="content_msg">
+                <div class="row_msg">
+                    <label for="username_real" class="line">真实姓名</label>
+                    <div class="row_inpt">
+                        <input type="text" name="username_real" id="username_real">
+                    </div>
+                </div>
+                <div class="row_msg">
+                    <span class="line">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</span>
+                    <div class="row_inpt sex">
+                        <input type="radio"  value="male" name="sex" checked>男
+                        <input type="radio"  value="female" name="sex">女
+                    </div>
+                </div>
+                <div class="row_msg">
+                    <label for="date" class="line">出生日期</label>
+                    <div class="row_inpt">
+                        <input type="text" id="date" name="date" id="date">
+                    </div>
+                </div>
+                <div class="row_msg">
+                    <label for="work" class="line">职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业</label>
+                    <div class="row_inpt">
+                        <input type="text" name="work" id="work">
+                    </div>
+                </div>
+                <div class="row_msg">
+                    <label for="qrpwd" class="line">您的标签</label>
+                    <div class="row_inpt">
+                        <select name="userlabel" id="userlabel">
+                            <option value="社会公众">社会公众</option>
+                            <option value="文博爱好者">文博爱好者</option>
+                            <option value="文博从业者">文博从业者</option>
+                            <option value="文博研究者">文博研究者</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="check_box">
+                    <input type="checkbox">同意用户注册协议
+                </div>
+                <botton class="btn" id="sub" disabled="disabled"><span>提&nbsp;&nbsp;交&nbsp;&nbsp;注&nbsp;&nbsp;册</span></botton>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/jquery.min.js"></script>
+    <script src="layer/layer.js"></script>
+    <script>
+        $("#header").load("include/head.html");
+        $("#footer").load("include/footer.html");
+        laydate({
+            elem: '#date',
+            format: 'YYYY-MM-DD', // 分隔符可以任意定义，该例子表示只显示年月
+            isclear: true //是否显示清空
+        });
+    </script>
+    <script src="js/index_register.js"></script>
+</body>
+</html>

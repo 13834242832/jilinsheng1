@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全站搜索</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index_global_search.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="wrapper">
+            <p><span class="line">当前位置</span><span>全站搜索</span></p>
+            <div class="section1">
+                <div class="common part1">
+                    <p class="title"><i></i><span>结果分类</span></p>
+                    <ul>
+                        <li class="active fl"><i></i><s>全部</s><span>(<u>0</u>)</span></li>
+                        <li class="fl"><i></i><s>博物馆一览</s><span>(<u>0</u>)</span></li>
+                        <li class="fl"><i></i><s>数字博物馆</s><span>(<u>0</u>)</span></li>
+                        <li class="fl"><i></i><s>藏品鉴赏</s><span>(<u>0</u>)</span></li>
+                        <li class="fl"><i></i><s>文创产品</s><span>(<u>0</u>)</span></li>
+                        <li class="fl"><i></i><s>资讯</s><span>(<u>0</u>)</span></li>
+                        <li class="fl"><i></i><s>学术</s><span>(<u>0</u>)</span></li>
+                        <li class="fl"><i></i><s>历史吉林</s><span>(<u>0</u>)</span>               </ul>
+                </div>
+                <div class="common part2">
+                    <p class="title"><i></i><span>查询范围</span></p>
+                    <ul>
+                        <li class="active fw"><i></i><s>所有结果</s></li>
+                        <li class="fw"><i></i><s>标题</s></li>
+                        <li class="fw"><i></i><s>正文</s></li>
+                    </ul>
+                </div>
+                <div class="common part3">
+                    <p class="title"><i></i><span>时间范围</span></p>
+                    <ul>
+                        <li class="active sj"><i></i><s>时间不限</s></li>
+                        <li class="sj"><i></i><s>一周内</s></li>
+                        <li class="sj"><i></i><s>一月内</s></li>
+                        <li class="sj"><i></i><s>一年内</s></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="top2">
+                    <span>共找到<u>0</u>数据</span>
+                    <div class="year criteria">
+                        <span>时间</span><u></u>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul>
+                        <!--<li class="msgimgtext">-->
+                            <!--<a href="">-->
+                                <!--<img src="" width="207px" height="154px" alt="">-->
+                            <!--</a>-->
+                            <!--<div class="msg">-->
+                                <!--<h2>吉林省博物院</h2>-->
+                                <!--<h3>地址：<span>吉林省长春市中山路15号</span></h3>-->
+                                <!--<h5>开放时间：<span>周二至周六  09:00-17:30</span></h5>-->
+                                <!--<p>吉林省博物院，原名吉林省博物馆，1951年经吉林省人民政府批准建立，1952年在松花江畔的吉林市正式开放，1954年，随省政府迁至长春市sdfasdfasdffffffffffffffffffffff。现位于长春市净月国家高新技术产业开发区永顺路1666号...</p>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="msgtext">-->
+                        <!--<h4>红山文化玉龙</h4>-->
+                        <!--<p>2014年9月24日，吕章申馆长前往杨绛先生家中拜望，为杨绛先生将其与钱钟书先生收藏的一批书画、册页、碑帖、砚台、印章以及钱钟书批注过的《韦氏英文大辞典》等珍贵文物无偿捐赠我馆，特来向杨绛先生颁发收藏证2014年9月24日，吕章申馆长前往杨绛先生家中拜望，为杨绛先生将其与钱钟书先生收藏的一批书画、册页、碑帖、砚台、印章以及钱钟书批注过的《韦氏英文大辞典》等珍贵文物无偿捐赠我馆，特来向杨绛先生颁发收藏证2014年9月24日，吕章申馆长前往杨绛先生家中拜望，为杨绛先生将其与钱钟书先生收藏的一批书画、册页、碑帖、砚台、印章以及钱钟书批注过的《韦氏英文大辞典》等珍贵文物无偿捐赠我馆，特来向杨绛先生颁发收藏证...</p>-->
+                        <!--<div><a href="">www.sdfas.com</a><span>2010-02-01</span></div>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <div class="pager">
+
+                </div>
+            </div>
+            <div class="section3 common">
+                <p class="title"><i></i><span>热搜词</span></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+            </div>
+    </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        $("#header").load("include/head.html");
+        $("#footer").load("include/footer.html");
+    </script>
+    <script src="js/jquery.pager.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="js/index_global_search.js"></script>
+    <!--<script>-->
+        <!--$(".pager").pager({-->
+            <!--pageIndex:0,-->
+            <!--pageSize:2,-->
+            <!--itemCount:400,-->
+            <!--maxButtonCount:4,-->
+        <!--});-->
+    <!--</script>-->
+</body>
+</html>

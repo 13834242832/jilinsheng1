@@ -1,0 +1,45 @@
+#footer{
+    width:1920px;
+    height:6.5rem;
+    background:#000;
+    padding-top:1rem;
+    border-top:2px solid #292a2a;
+}
+#message {
+  width:1200px;
+  margin:0 auto;
+  overflow: hidden;
+  font-size:12px;
+}
+#message li {
+    float:left;
+    margin-right:72px;
+    margin-left:40px;
+    text-align: center;
+}
+#message li span{
+    line-height: 27px;
+    margin-left:0.5rem;
+}
+#footer>p{
+    text-align: center;
+    font-size:12px;
+    margin-top:0.5rem;
+}
+#fd-link{
+    overflow: hidden;
+    width:800px;
+    margin:0 auto;
+    margin-top:0.5rem;
+}
+#fd-link li{
+    float:left;
+    font-size:12px;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    border-right:1px solid #eee;
+    text-align: center;
+}
+#fd-link li:first-child{
+    border-left:1px solid #eee;
+}

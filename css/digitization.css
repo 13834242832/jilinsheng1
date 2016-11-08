@@ -1,0 +1,208 @@
+#main{
+    width:1920px;
+    background:#000;
+}
+#main a{
+    text-decoration: none;
+}
+#main a:hover{
+    color:#eee;
+}
+li{
+    display:block;
+}
+.wrapper{
+    width:1400px;
+    margin:0 auto;
+}
+#slider{
+    width:1400px;
+    height:588px;
+    overflow: hidden;
+}
+#recommend{
+    width:100%;
+    overflow: hidden;
+    border-top:3px solid #eee;
+    font-size:1rem;
+    color:#fff;
+
+}
+
+#recommend>div{
+    float:left;
+    overflow: hidden;
+    width:70%;
+    height:50px;
+    padding:0.5rem;
+    border-bottom: 3px solid #fff;
+}
+#recommend>p{
+    float:left;
+    width:30%;
+    height:50px;
+    padding:0.5rem;
+    font-size:20px;
+    border-bottom: 3px solid #fff;
+
+}
+#recommend>p>span{
+    display: inline-block;
+    border-left:1px solid #eee;
+    padding-left:1rem;
+}
+#recommend>div p{
+    float:left;
+    font-size:20px;
+    padding-right:44px;
+    border-right:1px solid #eee;
+}
+#recommend>div a{
+    float:right;
+    font-size:20px;
+}
+#recommend_content{
+    float:left;
+}
+#recommend_content ul{
+    width:991px;
+    padding-top:15px;
+    overflow: hidden;
+}
+#recommend_content ul li{
+    float:left;
+    width: 225px;
+    height:156px;
+    margin-right:18px;
+    margin-bottom:15px;
+    text-align: center;
+}
+#recommend_content ul li:first-child{
+    width:468px;
+    height:326px;
+
+}
+#recommend_content ul li span{
+    display:block;
+    width:100%;
+    height:15%;
+    font-size:14px;
+    background:rgba(0,0,0,0.5);
+    position:relative;
+    left:0;
+    bottom:15%;
+}
+#recommend_content ul li span u{
+    line-height:23px;
+    text-decoration:none;
+}
+#recommend_content ul li:first-child span{
+    font-size:25px;
+}
+#recommend_content ul li:first-child span u{
+    line-height:49px;
+}
+#hot{
+    width:409px;
+    height:525px;
+    float:left;
+    padding:0px 46px;
+}
+#hot ul li{
+    height:58.3px;
+}
+#hot ul li span{
+    line-height: 58.3px;
+}
+#hot ul li span u{
+    display:inline-block;
+    height:20px;
+    width:20px;
+    margin-bottom: 20px;
+    margin-right:17px;
+    background:url('../img/digitization/list_icon.png') no-repeat;
+}
+#hot ul li span a{
+    font-size:20px;
+    width:250px;
+    display:inline-block;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.common{
+    display:inline-block;
+    margin-bottom: 20px;
+    width:15px;
+    height:20px;
+}
+.sort1{
+    background:url('../img/digitization/sort.png') no-repeat;
+}
+.sort2{
+    background:url('../img/digitization/sort.png') 0px -20px no-repeat;
+}
+.sort3{
+    background:url('../img/digitization/sort.png') 0px -40px no-repeat;
+}
+/*第二个行*/
+#hot ul li:nth-child(2) u{
+    background-position:0px -20px;
+}
+#hot ul li:nth-child(3) u{
+    background-position:0px -40px;
+}
+#hot ul li:nth-child(4) u{
+    background-position:0px -60px;
+}
+#hot ul li:nth-child(5) u{
+    background-position:0px -80px;
+}
+#hot ul li:nth-child(6) u{
+    background-position:0px -100px;
+}
+#hot ul li:nth-child(7) u{
+    background-position:0px -120px;
+}
+#hot ul li:nth-child(8) u{
+    background-position:0px -140px;
+}
+#hot ul li:nth-child(9) u{
+    background-position:0px -160px;
+}
+
+
+#cartoon{
+    width:1400px;
+    height:272px;
+    border-top:3px solid #fff;
+}
+#cartooncontent{
+    padding-top:35px;
+}
+/*、、、、、、、、、、、、、、*/
+.banner { position: relative; overflow: auto; text-align: center;}
+.banner li { list-style: none; }
+.banner ul { overflow: hidden}
+.banner ul li { float: left; }
+#b05 { width: 1400px;}
+#b05 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b05 .dots li
+{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 4px;
+    text-indent: -999em;
+    border: 2px solid #fff;
+    border-radius:50%;
+    cursor: pointer;
+    opacity: .4;
+    background:#313131;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+#b05 .dots li.active
+{
+    background: #facd89;
+    opacity: 1;
+}

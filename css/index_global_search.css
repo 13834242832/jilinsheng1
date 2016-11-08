@@ -1,0 +1,353 @@
+#main{
+    width:1920px;
+    background:#000;
+    font-size:18px;
+    color:#eee;
+}
+button{
+    padding:0;
+    margin:0;
+}
+a{
+    color:#bbb;
+}
+a:hover{
+    color:#fff;
+}
+.common ul li.active{
+    color:#9c9075;
+}
+.wrapper{
+    margin:0 auto;
+    padding:10px 0;
+    overflow: hidden;
+}
+.wrapper>p{
+    height:35px;
+    font-size:18px;
+    padding:15px 0;
+    color:#eee;
+    margin-top:30px;
+    padding-left:212px;
+    background:#313131;
+    margin-bottom: 10px;
+}
+.wrapper>p span{
+    line-height:35px;
+}
+.line{
+    padding-right:10px;
+    border-right:1px solid #454545;
+    margin-right:20px;
+}
+
+.section1{
+    width:268px;
+    margin:0 auto;
+    margin-top:32px;
+    float:left;
+    margin-left:210px;
+}
+.title{
+    width:268px;
+    height:52px;
+    border:none;
+    border-radius:3px;
+    background:#ad9d86;
+    font-size: 24px;
+}
+.title span{
+    margin-left:20px;
+    line-height:52px;
+}
+.title i{
+    display:inline-block;
+    position:relative;
+    top:2px;
+    width:25px;
+    height:18px;
+    margin-left:42px;
+    background:url("../img/icon.png") 50% 10% no-repeat;
+}
+.part1{
+    width:268px;
+    height:472px;
+}
+.part2{
+    width:268px;
+    height:250px;
+}
+.part3{
+    width:268px;
+    height:300px;
+}
+.common{
+    background:#313131;
+}
+.common ul{
+    margin-left:20px;
+    margin-top:45px;
+}
+.common ul li{
+    cursor: pointer;
+    width:228px;
+    height:44px;
+    font-size:16px;
+    color:#cdcdcd;
+    border-top:1px solid #1b1b1b;
+    border-bottom: 1px solid #3f3f3f;
+}
+.common ul li i{
+    display:inline-block;
+    width:23px;
+    height:23px;
+    margin-right:10px;
+    position:relative;
+    left:5px;
+    top:4px;
+    background:url("../img/img_index/icon_all_search.png") no-repeat;
+}
+.common ul li s{
+    text-decoration: none;
+}
+.common ul li a{
+    display:inline-block;
+    line-height: 44px;
+    margin-left:32px;
+}
+.common ul li:last-child{
+    border-bottom: none;
+}
+.part1 ul li:first-child{
+    border-top:none;
+}
+.part1 ul li:nth-child(2) i{
+    background-position:-25px 0
+}
+.part1 ul li:nth-child(3) i{
+    background-position:-50px 0
+}
+.part1 ul li:nth-child(4) i{
+    background-position:-75px 0
+}
+.part1 ul li:nth-child(5) i{
+    background-position:-99px 0
+}
+.part1 ul li:nth-child(6) i{
+    background-position:0px -25px
+}
+.part1 ul li:nth-child(7) i{
+    background-position:-25px -25px
+}
+.part1 ul li:nth-child(8) i{
+    background-position:-50px -25px
+}
+.part1 ul li:nth-child(8){
+    border-bottom: none;
+}
+.part2 ul li:first-child{
+    border-top:none;
+}
+.part2 ul li:first-child i{
+    background-position:-75px -25px
+}
+.part2 ul li:nth-child(2) i{
+    background-position:-100px -25px
+}
+.part2 ul li:nth-child(3) i{
+    background-position:0 -50px
+}
+.part3 ul li:first-child{
+    border-top:none;
+}
+.part3 ul li:first-child i{
+    background-position:-24px -50px
+}
+.part3 ul li:nth-child(2) i{
+    background-position:-49px -50px
+}
+.part3 ul li:nth-child(3) i{
+    background-position:-74px -50px
+}
+.part3 ul li:nth-child(4) i{
+    background-position:-99px -50px
+}
+.section2{
+    float:left;
+    width:921px;
+    margin-top:32px;
+    margin-left:14px;
+}
+.top2{
+    width:921px;
+    height:52px;
+    background:#ad9d86;
+    border-radius:4px;
+}
+.top2>span{
+    font-size: 16px;
+    line-height: 52px;
+    margin-left:20px;
+}
+.criteria{
+    float:right;
+    height:28px;
+    width:105px;
+    border:1px solid #eee;
+    border-radius:4px;
+    letter-spacing:15px;
+    margin-right:22px;
+    margin-top:12px;
+}
+.criteria:hover{
+    cursor: pointer;
+}
+.criteria span{
+    display: inline-block;
+    line-height:28px;
+    vertical-align:top;
+    margin-left:14px;
+}
+.criteria u{
+    display:inline-block;
+    width:23px;
+    height:28px;
+    border-radius:0 4px 4px 0;
+    border-left:1px solid #eee;
+    background: url("../img/datas/sort-icon.png") no-repeat;
+}
+.criteria u.sort1{
+    background: url("../img/datas/sort-icon.png") -23px no-repeat;
+}
+.content {
+    margin-top:26px;
+}
+.content ul{
+    min-height:1054px;
+}
+.content ul li{
+    margin-bottom:26px
+}
+.msgimgtext .msg {
+    float:right;
+    width:691px;
+    height:132px;
+    padding-top:22px;
+    padding-left:23px;
+    background:#727272;
+}
+.msgimgtext .msg h2,.msg h3,.msg h5{
+    font-size:16px;
+    height:28px;
+}
+.msgimgtext .msg div{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size:14px;
+    overflow:hidden;
+    width:680px;
+    height:38px;
+}
+.msgtext{
+    padding-top:10px;
+    padding-bottom:10px;
+    color:#eee;
+}
+.msgtext p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-line-clamp:3;
+    -ms-line-clamp:3;
+    -moz-line-clamp:3;
+    height:60px;
+    overflow: hidden;
+    font-size:14px;
+    color:#aaa;
+}
+.msgtext div{
+    overflow: hidden;
+    font-size:14px;
+}
+.msgtext div span{
+    float:right;
+}
+.msgtext a{
+    float:left;
+    color:#aaa;
+}
+.msgtext h4{
+    font-size:16px;
+}
+/*分页样式*/
+.pager {
+    display: inline-block;
+    height:32px;
+    font-size:16px;
+    background:#000;
+    position:relative;
+    left:50%;
+    margin-top:10px;
+    -webkit-transform:translate(-50%,0);
+    -moz-transform: translate(-50%,0) ;
+    -ms-transform: translate(-50%,0) ;
+    -o-transform: translate(-50%,0) ;
+    transsform: translate(-50%,0) ;
+}
+
+.pager .flip{
+    display: inline-block;
+    width:50px;
+    height:25px;
+    text-align: center;
+    border:1px solid #fff;
+    border-radius: 5px;
+    line-height:25px;
+}
+
+.pager .curPage {
+    text-decoration: underline;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color:#fff;
+    margin-left:20px;
+}
+.pager span{
+    margin-left:18px;
+}
+.pager a {
+    color: #fff;
+    text-decoration: none;
+    width:26px;
+    margin-left:18px;
+}
+
+.pager .noPage {
+    color:#666;
+    border-color: #666;
+    margin-left:20px;
+}
+.pager input{
+    background:#000;
+    color:#fff;
+    font-size:16px;
+    margin-left:20px;
+}
+.pager input:focus{
+    background:#313131;
+}
+/*分页样式结束*/
+.section3{
+    float:left;
+    height:500px;
+    margin-left:12px;
+    margin-top:32px;
+}
+.section3 ul li{
+    border:none;
+    text-align: center;
+}

@@ -1,0 +1,196 @@
+#main{
+    width:1920px;
+    background: #111;
+    font-size:18px;
+    color:#eee;
+}
+#main a{
+    color:#bbb;
+}
+#main a:hover{
+    color:#eee;
+}
+.wrapper{
+    width:1413px;
+    margin:0 auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.wrapper>p{
+    font-size:16px;
+    padding:30px 0;
+}
+.banner { float:left;position: relative; overflow: auto;left:180px; text-align: center;}
+.banner li { list-style: none; }
+.banner ul { overflow: hidden}
+.banner ul li { float: left; }
+#b05 { width:525px;}
+#b05 .dots { position: absolute; left: 0;right: 0;bottom:10px;}
+#b05 .dots li
+{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 18px;
+    text-indent: -999em;
+    border-radius:50%;
+    cursor: pointer;
+    background:#eee;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+#b05 .dots li.active
+{
+    background: #d7bf79;
+    opacity: 1;
+}
+.msg{
+    float:left;
+    width:848px;
+    height:392px;
+    position:relative;
+    left:180px;
+    margin-left:20px;
+}
+.msg>div>p{
+    width:130px;
+    height:30px;
+    font-size:22px;
+    text-align: center;
+    color:#d7bf79;
+    margin-left:30px;
+}
+.msg>div>p span{
+    line-height: 30px;
+}
+table {
+    width:578px;
+    height:auto;
+    font-size:20px;
+    color:#eee;
+    margin-top:43px;
+    margin-left:94px;
+}
+table tbody tr{
+    height:45px;
+}
+
+table tbody tr td:first-child{
+    width:48px;
+}
+table tbody tr td:nth-child(2){
+    width:200px;
+}
+table tbody tr td:nth-child(3){
+    width:80px;
+
+ }
+.xs{
+    float:left;
+    width:1412px;
+}
+ .xs>p{
+     font-size:22px;
+     width:200px;
+     margin-top:30px;
+     margin-left:30px;
+ }
+.img_list{
+    overflow:hidden;
+    margin:0 auto;
+    margin-top:30px;
+    width:1096px;
+}
+.img_list li{
+    float:left;
+    position:relative;
+    width:166px;
+    height:128px;
+    margin-right:20px;
+    margin-bottom:20px;
+}
+.img_list li:nth-child(6n){
+    margin-right:0;
+}
+.img_list li:last-child{
+    margin-right:0;
+}
+.img_list li p{
+    display:inline-block;
+    text-align: center;
+    width:166px;
+    height:32px;
+    font-size:18px;
+    color:#eee;
+    background:rgba(0,0,0,.5);
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.img_list li p span{
+    line-height:32px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*分页样式*/
+.pager {
+    display: inline-block;
+    height:32px;
+    font-size:16px;
+    position:relative;
+    left:50%;
+    margin-top:10px;
+    -webkit-transform:translate(-50%,0);
+    -moz-transform: translate(-50%,0) ;
+    -ms-transform: translate(-50%,0) ;
+    -o-transform: translate(-50%,0) ;
+    transsform: translate(-50%,0) ;
+}
+
+.pager .flip{
+    display: inline-block;
+    width:68px;
+    height:25px;
+    text-align: center;
+    border:1px solid #fff;
+    border-radius: 5px;
+    line-height:25px;
+}
+
+.pager .curPage {
+    text-decoration: underline;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color:#fff;
+    margin-left:20px;
+}
+.pager span{
+    margin-left:18px;
+}
+.pager a {
+    color: #fff;
+    text-decoration: none;
+    width:26px;
+    margin-left:18px;
+}
+
+.pager .noPage {
+    color:#666;
+    border-color: #666;
+    margin-left:20px;
+}
+.pager input{
+    background:#1b1b1b;
+    color:#fff;
+    font-size:16px;
+    margin-left:20px;
+}
+.pager input:focus{
+    background:#313131;
+}
+/*分页样式结束*/

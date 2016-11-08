@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>每月一品</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/appreciate_month.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="wrapper">
+            <p><span>当前位置：</span><a href="index.html">首页</a>&gt;<a href="appreciate.html">藏品鉴赏</a>&gt;<span>每月一品</span></p>
+            <div class="time">
+                <span>时间</span><u class="sort0"></u>
+            </div>
+            <div class="content">
+                <ul>
+                </ul>
+            </div>
+            <div class="pager"></div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("include/head.html",function(){
+            $("#nav ul li:nth-child(4)").addClass("navactived").siblings().removeClass('navactived');
+        });
+        $("#footer").load("include/footer.html");
+    </script>
+    <script src="js/jquery.pager.js"></script>
+    <script src="js/appreciate_month.js"></script>
+</body>
+</html>

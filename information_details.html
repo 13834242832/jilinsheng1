@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>咨询详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/information_details.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="wrapper">
+            <p><span>当前位置：</span><a href="index.html">首页</a>&gt;<a href="information.html">资讯</a>&gt;<span>资讯详情</span></p>
+            <h4></h4>
+            <h6><span class="time"></span><u></u></h6>
+            <div class="content"></div>
+            <div class="btom">
+                <span class="prev">上一篇：<a href=""></a></span>
+                <span class="next">下一篇：<a href=""></a></span>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("include/head.html",function(){
+            $("#nav ul li:nth-child(6)").addClass("navactived").siblings().removeClass('navactived');
+        });
+        $("#footer").load("include/footer.html");
+    </script>
+    <script src="js/information_details.js"></script>
+</body>
+</html>

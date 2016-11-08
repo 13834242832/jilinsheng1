@@ -1,0 +1,121 @@
+#header{
+    width:1920px;
+    height:152px;
+    background:url("../img/top.jpg") no-repeat;
+    background-size:100%;
+    overflow: hidden;
+    border-bottom:2px solid #BABABA;
+}
+#header a{
+    color:#000;
+    text-decoration: none;
+}
+#header a:hover{
+    color:#eee;
+}
+#logo{
+    float:left;
+    width:768px;
+    height:132px;
+}
+#logo img{
+    position:relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+}
+#right{
+    float:left;
+    width:1152px;
+    height:132px;
+}
+#right>div{
+    clear:both;
+    height:66px;
+}
+.login_succe{
+    position:absolute;
+    right:-26px;
+    top:10px;
+    font-size:16px;
+    width:300px;
+    height:25px;
+    color:#000;
+    display:none;
+}
+.out{
+    cursor: pointer;
+}
+#right div input{
+    float:left;
+    box-sizing: content-box;
+    width:464px;
+    height:40px;
+    background:#000;
+    border-radius:8px;
+    border:2px solid #fff;
+    position:relative;
+    top:17px;
+    left:10px;
+    font-size:20px;
+    color:#fff;
+}
+#top{
+    position:relative;
+}
+#top>ul{
+    float:right;
+    overflow:hidden;
+    margin-right:100px;
+    margin-top: 10px;
+
+}
+#top>a{
+    display:inline-block;
+    position:absolute;
+    right:360px;
+    top:16px;
+}
+#top>ul>li{
+    float:left;
+    font-size:10px;
+    margin-left:20px;
+}
+#top>ul>li>a{
+    font-size:16px;
+
+}
+#search{
+    display:inline-block;
+    cursor: pointer;
+    width:25px;
+    height:25px;
+    position:relative;
+    top:28px;
+    right:25px;
+    background:url("../img/search.png") no-repeat;
+}
+#nav{
+    height:50%;
+}
+#nav ul{
+    width:100%;
+    margin:0;
+    overflow:hidden;
+    position:relative;
+    top:30px;
+}
+#nav ul li{
+    float:left;
+    margin-right: 30px;
+    padding-top:18px;
+
+}
+.navactived{
+    background:url("../img/icon.png") 50% 10% no-repeat;
+}
+#nav ul li a{
+    font-size:20px;
+
+}

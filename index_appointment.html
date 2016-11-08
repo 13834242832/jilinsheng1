@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index_appointment.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="laydate/laydate.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="wrapper">
+            <p>当前位置：参展预约</p>
+            <div class="content">
+                <form>
+                    <table class="msg">
+                        <tbody>
+                            <tr>
+                               <td>预约内容：</td>
+                               <td colspan="2">
+                                   <select class="form-control" name="museum" id="museum">
+                                   </select>
+                               </td>
+                            </tr>
+                            <tr>
+                               <td>预约时间：</td>
+                               <td colspan="2"><input autofocus id="date" placeholder="请输入预约时间" name="date"><p></p></td>
+                            </tr>
+                            <tr>
+                               <td>预约人1：</td>
+                               <td><input class="name" type="text" name="uname1 " id="uname1" placeholder="请输入真实姓名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入真实姓名'"><p></p></td>
+                               <td><input class="id" name="uid1" id="uid1" placeholder="请输入身份证号码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入身份证号码'"><p></p></td>
+                            </tr>
+                            <tr>
+                               <td>预约人2：</td>
+                               <td><input class="name" type="text" name="uname2" id="uname2" placeholder="请输入真实姓名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入真实姓名'"><p></p></td>
+                               <td><input class="id" name="uid2" id="uid2" placeholder="请输入省份证号码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入身份证号码'"><p></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input value="预约" id="submit" disabled>
+                </form>
+                <input type="button" value="添加预约人" id="adduser">
+                <div class="panel">
+                    <div class="panel-heading">吉林省数字博物馆在线服务平台预约说明</div>
+                    <div class="panel-body">
+                        <ol>
+                            <li>一.预约说明：在线登记预约博物馆，预约时间和预约个人信息。个人观众通过网站预约门票，每人每次预约参观门票不得超过3张。</li>
+                            <li>二.领票方式：凭借预约码和身份证件到博物馆预约窗口换取门票。注：部分博物馆需要收取费用。</li>
+                            <li>三.入馆时间：周二至周日 09：00-16：00，周一闭馆。</li>
+                            <li>四.其它说明：周一预约无效，请勿在网站预约周一参观。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="js/index_appointment.js"></script>
+    <script>
+        $("#header").load("include/head.html");
+        $("#footer").load("include/footer.html");
+        laydate({
+            elem: '#date',
+            format: 'YYYY-MM-DD', // 分隔符可以任意定义，该例子表示只显示年月
+            isclear: true //是否显示清空
+        });
+    </script>
+</body>
+</html>

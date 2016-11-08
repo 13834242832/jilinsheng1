@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>吉林历史</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/history.css">
+
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="wrapper">
+            <div class="section1">
+                <div class="slide1">
+                    <div class="banner" id="b05">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="modultop">
+                    <p>非物质文化遗产 <a href="history_more.html?CLASS=非物质文化遗产">更多&gt;</a></p>
+                </div>
+                <div class="content">
+                    <div class="slide2">
+                        <div id="smallslide" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="img/history/小轮播1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <!--<li>-->
+                                <!--<a href="">-->
+                                    <!--<img src="img/history/遗产1.png">-->
+                                    <!--<p><span>满族旗鼓文化</span></p>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section3">
+                <div class="modultop">
+                    <p>地域文化<a href="history_more.html?CLASS=地域文化">更多&gt;</a></p>
+                </div>
+                <div class="modulright">
+                    <ul>
+                        <!--<li>-->
+                            <!--<div>-->
+                                <!--<img src="img/history/文化1.png" alt="">-->
+                            <!--</div>-->
+                            <!--<h3>红轴文化</h3>-->
+                            <!--<p>在中华民族的文化宝库中，渤海文化-->
+                                <!--是其中的一个耀眼光环，渤海文化在-->
+                                <!--中国关东黑土地文化中占据特殊的地-->
+                                <!--位。渤海上京故城（龙泉府），位于-->
+                                <!--宁安市渤海镇，是当今世界保存最为-->
+                                <!--完好的中世纪都城遗址，据今已有-->
+                                <!--１３００多年的历史。</p>-->
+                            <!--<h4><a href="">查看更多&gt;</a></h4>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="section4">
+                <div class="modultop">
+                    <p>吉林历史名人</p>
+                </div>
+                <div class="famous">
+                    <ul>
+                        <!--<li>-->
+                            <!--<a href="">-->
+                                <!--<img src="img/history/名人1.png" alt="">-->
+                                <!--<span>完颜阿骨打</span>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/unslider.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $("#header").load("include/head.html",function(){
+            $("#nav ul li:nth-child(8)").addClass("navactived").siblings().removeClass('navactived');
+        });
+        $("#footer").load("include/footer.html");
+    </script>
+    <script src="js/history.js"></script>
+</body>
+</html>

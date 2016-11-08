@@ -1,0 +1,209 @@
+#main{
+    width:1920px;
+    background:#000;
+    font-size:18px;
+    color:#eee;
+}
+button{
+    padding:0;
+    margin:0;
+}
+#main a{
+    color:#bbb;
+}
+#main a:hover{
+    color:#eee;
+}
+.wrapper{
+    width:1660px;
+    margin:0 auto;
+    padding:10px 0;
+    overflow: hidden;
+}
+.wrapper>p{
+    height:50px;
+}
+.wrapper>p span{
+    line-height:50px;
+}
+.section1{
+    float:left;
+    width:252px;
+}
+.part1{
+    width:205px;
+    border:1px solid #b5b5b5;
+    padding:34px 0 0 45px;
+}
+.part1 button{
+    width:158px;
+    height:28px;
+    border:1px solid #b5b5b5;
+    border-radius:4px;
+    background:#1b1b1b;
+    font-size:16px;
+    color:#bbb;
+    outline:none;
+    margin-bottom:20px;
+    font-family:微软雅黑;
+    transition: all .2s linear;
+}
+
+.part1 button.active{
+    background:#313131;
+    color:#eee;
+}
+.part1 button:hover{
+    background:#313131;
+    color:#eee;
+}
+.part2{
+    width:228px;
+    border:1px solid #b5b5b5;
+    margin-top:17px;
+    padding:34px 0 0 22px;
+}
+.part2 input{
+    width:147px;
+    height:30px;
+    background:#1b1b1b;
+    border:1px solid #b5b5b5;
+    border-radius:4px 0 0 4px;
+    font-size:16px;
+    color:#eee;
+}
+.part2 input[placeholder]{
+    font-family:微软雅黑;
+    font-size:14px;
+    padding-left:5px;
+}
+.part2 label{
+    display:inline-block;
+    vertical-align: bottom;
+    width:64px;
+    height:28px;
+    border:1px solid #b5b5b5;
+    border-radius:0 4px 4px 0;
+    font-size:18px;
+    background:#1b1b1b;
+    border-left:none;
+    text-align: center;
+    transition:all .2s linear;
+}
+.part2 div{
+    margin-bottom: 19px;
+}
+.part2 label:hover{
+    background:#000;
+}
+.part2 label span{
+    line-height:28px;
+}
+/*、、、、、、、、、、、、*/
+.section2{
+    float:left;
+    width:1344px;
+    background:#1b1b1b;
+    margin-left:30px;
+    overflow:hidden;
+}
+.section2>p{
+    height:40px;
+    border-bottom:2px solid #b5b5b5;
+    padding-left:10px;
+}
+.section2 p span{
+    line-height:40px;
+}
+.table_content ul{
+    padding:20px;
+    overflow:hidden;
+}
+.table_content ul li{
+    width: 311px;
+    height:240px;
+    position: relative;
+    float:left;
+    margin-right:20px;
+    margin-bottom: 20px;
+}
+.table_content ul li p{
+    display:inline-block;
+    text-align: center;
+    width:311px;
+    height:35px;
+    font-size:18px;
+    color:#eee;
+    background:rgba(0,0,0,.5);
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.table_content ul li p span{
+    line-height:35px;
+}
+.table_content ul li:nth-child(4),.table_content ul li:nth-child(8),.table_content ul li:nth-child(12),.table_content ul li:last-child{
+    margin-right:0;
+}
+/*分页样式*/
+.pager {
+    display: inline-block;
+    height:32px;
+    font-size:16px;
+    background:#1b1b1b;
+    position:relative;
+    left:50%;
+    margin-top:10px;
+    -webkit-transform:translate(-50%,0);
+    -moz-transform: translate(-50%,0) ;
+    -ms-transform: translate(-50%,0) ;
+    -o-transform: translate(-50%,0) ;
+    transsform: translate(-50%,0) ;
+}
+
+.pager .flip{
+    display: inline-block;
+    width:68px;
+    height:25px;
+    text-align: center;
+    border:1px solid #fff;
+    border-radius: 5px;
+    line-height:25px;
+}
+
+.pager .curPage {
+    text-decoration: underline;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color:#fff;
+    margin-left:20px;
+}
+.pager span{
+    margin-left:18px;
+}
+.pager a {
+    color: #fff;
+    text-decoration: none;
+    width:26px;
+    margin-left:18px;
+}
+
+.pager .noPage {
+    color:#666;
+    border-color: #666;
+    margin-left:20px;
+}
+.pager input{
+    background:#1b1b1b;
+    color:#fff;
+    font-size:16px;
+    margin-left:20px;
+}
+.pager input:focus{
+    background:#313131;
+}
+
+
+/*分页样式结束*/

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博物馆一览</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/museum_details.css">
+    <script type="text/javascript" src="http://www.coding123.net/getip.ashx?js=1"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="wrapper">
+            <p><span>当前位置：<a href="index.html">首页</a>&gt;博物馆一览&gt;<u></u></span></p>
+            <h3><span></span></h3>
+            <div class="section_lf">
+                <div class="lf0">
+                    <div class="museum_img">
+                        <div class="banner" id="b05">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn_group">
+                        <button class="btn1"></button>
+                        <!--<button class="btn2"></button>-->
+                        <button class="btn3"></button>
+                        <div class="bdsharebuttonbox" data-tag="share_1">
+                            <a class="bds_qzone" data-cmd="qzone" href="#">qq空间</a>
+                            <a class="bds_tsina" data-cmd="tsina">新浪微博</a>
+                            <a class="bds_weixin" data-cmd="weixin">微信</a>
+                        </div>
+                    </div>
+                    <div class="museum_ms">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
+                                    <td class="jb"></td>
+                                </tr>
+                                <tr>
+                                    <td>类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
+                                    <td class="lb"></td>
+                                </tr>
+                                <tr>
+                                    <td>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</td>
+                                    <td class="dq"></td>
+                                </tr>
+                                <tr>
+                                    <td>开放时间：</td>
+                                    <td class="sj"></td>
+                                </tr>
+                                <tr style="padding-top:32px;">
+                                    <td>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</td>
+                                    <td class="dz"></td>
+                                </tr>
+                                <tr>
+                                    <td>联系电话：</td>
+                                    <td class="dh"></td>
+                                </tr>
+                                <tr>
+                                    <td>官&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网：</td>
+                                    <td class="web"><a href="" style="display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn2"></button>
+                    </div>
+                </div>
+                <div class="lf1">
+                    <ul>
+                        <li class="active" data-items="#txt"><span>展馆介绍</span></li>
+                        <li data-items="#floor"><span>常设展览</span></li>
+                        <li data-items="#history"><span>历史沿革</span></li>
+                        <li data-items="#msg"><span>院长致辞</span></li>
+                        <li data-items="#leader"><span>博物馆领导</span></li>
+                    </ul>
+                    <div id="floor" style="display: none">
+                        <div class="picScroll-left">
+                            <div class="hd">
+                                <a class="prev"></a>
+                                <ul></ul>
+                                <a class="next"></a>
+                            </div>
+                            <div class="bd">
+                                <ul class="picList">
+                                    <!--<li>-->
+                                        <!--<div class="pic"><a href="" target="_blank"><img src="img/museum_details/图层%201.png" width="304px" height="210px;" /></a></div>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<div class="pic"><a href="" target="_blank"><img src="img/museum_details/图层%202.png" width="304px" height="210px;" /></a></div>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<div class="pic"><a href="" target="_blank"><img src="img/museum_details/图层%203.png" width="304px" height="210px;" /></a></div>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<div class="pic"><a href="" target="_blank"><img src="img/museum_details/图层%204.png" width="304px" height="210px;" /></a></div>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<div class="pic"><a href="" target="_blank"><img src="img/museum_details/图层%204.png" width="304px" height="210px;" /></a></div>-->
+                                    <!--</li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="txt">
+                    </div>
+                    <div id="history" style="display: none;text-indent:28px;line-height:28px;font-size:14px;color:#eee;padding:30px 10px;"></div>
+                    <div id="msg" style="display: none;text-indent:28px;line-height:28px;font-size:14px;color:#eee;padding:30px 10px;"></div>
+                    <div id="leader" style="display: none;text-indent:28px;line-height:28px;font-size:14px;color:#eee;padding:30px 10px;"></div>
+                </div>
+                <div class="lf2">
+                    <div class="m m1">
+                        <p>
+                            <span>近期资讯</span>
+                            <a href="">更多&gt;</a>
+                        </p>
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="m m3">
+                        <p>
+                            <span>文创产品</span>
+                        </p>
+                        <!--<ul class="img_list_wc">-->
+                        <!--</ul>-->
+                        <div class="multipleColumn" style="margin:0 auto">
+                            <div class="hd1">
+                                <a class="prev"></a>
+                                <ul style="padding:0"></ul>
+                                <a class="next"></a>
+                            </div>
+                            <div class="bd1">
+                                <div class="img_list_wc">
+                                </div><!-- ulWrap End -->
+                            </div><!-- bd End -->
+                        </div><!-- multipleColumn End -->
+                    </div>
+                </div>
+                <div class="lf4">
+                    <div class="m m4">
+                        <p>
+                            <span>近期学术</span>
+                            <a href="">更多&gt;</a>
+                        </p>
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="m m5">
+                        <p>
+                            <span>数字展厅</span>
+                        </p>
+                        <ul class="img_list_sz">
+                        </ul>
+                    </div>
+                </div>
+                <div class="yp">
+                    <ul class="img_list">
+                    </ul>
+                    <div class="more">
+                        <div class="wc">
+                            <h4>一普数据</h4>
+                            <p><a href="">查看更多&gt;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="m m6">
+                    <p>
+                        <span>馆藏精品</span>
+                        <a href="">更多&gt;</a>
+                    </p>
+                    <ul class="img_list1">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $("#header").load("include/head.html",function(){
+            $("#nav ul li:nth-child(2)").addClass("navactived").siblings().removeClass('navactived');
+        });
+        $("#footer").load("include/footer.html");
+    </script>
+    <script src="js/unslider.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="js/museum_details.js"></script>
+</body>
+</html>

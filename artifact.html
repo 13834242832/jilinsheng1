@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文创产品</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/artifact.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="section1">
+            <div class="hot">
+                <p><span>当前位置：<a href="index.html">首页</a>&gt;文创产品</span></p>
+                <div class="hotcontent">
+                    <p><span>热门文创产品</span></p>
+                    <div class="tablelist">
+                        <img src="img/artifact/hot_bg.png" alt="">
+                        <ul>
+                            <li><a href="#">松花砚</a></li>
+                            <li><a href="#">《黑土军魂》纪念币</a></li>
+                            <li><a href="#">《春草集》</a></li>
+                            <li><a href="#">《扶余明墓》</a></li>
+                            <li><a href="#">《后太平》</a></li>
+                            <li><a href="#">阿富汗白玉笔筒</a></li>
+                            <li><a href="#">特制指甲刀</a></li>
+                            <li><a href="#">旅游纪念怀表</a></li>
+                            <li><a href="#">溥仪御用卤簿车车模</a></li>
+                            <li><a href="#">金镶玉平安扣</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="criteria">
+                <div class="top">
+                    <p>类型：</p>
+                    <ul id="gp1">
+                        <li><a class="active">全部</a></li>
+                    </ul>
+                </div>
+                <label for="pn">文创产品名称：
+                    <input type="text" name="pname" id="pn">
+                </label>
+                <button class="search">查询&gt;</button>
+            </div>
+            <div class="bottom">
+                <div class="year" data-state="0">
+                    <span>时间</span><u></u>
+                </div>
+                <div class="time" data-state="0">
+                    <span>热度</span><u></u>
+                </div>
+            </div>
+            <div class="content">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="pager">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $("#header").load("include/head.html",function(){
+            $("#nav ul li:nth-child(5)").addClass("navactived").siblings().removeClass('navactived');
+        });
+        $("#footer").load("include/footer.html");
+    </script>
+    <script src="js/jquery.pager.js"></script>
+    <script src="js/artifact.js"></script>
+</body>
+</html>

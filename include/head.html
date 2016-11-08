@@ -1,0 +1,91 @@
+    <head>
+        <lin src="."></lin>
+    </head>
+    <div id="logo">
+        <img src="img/logo_index.png">
+    </div>
+    <div id="right">
+        <div id="top">
+            <input type="text" id="searchbox"><span id="search"></span>
+            <ul class="login_no">
+                <li class="login"><a href="index_login.html">登录</a></li>
+                <li class="register"><a href="index_register.html">注册</a></li>
+                <li><a href="index_appointment.html" target="_blank">预约</a></li>
+            </ul>
+            <div class="login_succe">
+                <p><a href="index_userinfo.html" id="uname"></a>欢迎您！ <a class="out">退出</a>&nbsp;&nbsp;&nbsp;<a href="index_appointment.html">预约</a></p>
+            </div>
+            <a href="picture_search.html">
+                <img src="img/picturesearch.png" alt="">
+            </a>
+        </div>
+        <div id="nav">
+            <ul>
+                <li class="navactived"><a href="index.html">首页</a></li>
+                <li><a href="museum_search.html?gp1=全部&gp2=全部&gp3=全部&key=all&time=0&hot=0">博物馆一览</a></li>
+                <li><a href="digitization.html">数字博物馆</a></li>
+                <li><a href="appreciate.html">藏品鉴赏</a></li>
+                <li><a href="artifact.html?CLASS=全部&time=0&hot=0&kw=all">文创产品</a></li>
+                <li><a href="information.html">资讯</a></li>
+                <li><a href="datas.html?gp1=全部&gp2=全部&gp3=全部&gp4=全部&kw=all&time=0">一普数据</a></li>
+                <li><a href="history.html">吉林历史</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("#search").on("click",function(){
+                if($(this).prev().val()==""){
+                    alert("请输入搜内容！");
+                    return;
+                }else{
+                    window.open("index_global_search.html?gp=全部&gp=所有结果&gp=时间不限&kw="+$(this).prev().val(),"_blank");
+                }
+            })
+            function getCookie(name)
+            {
+                var arr=document.cookie.split('; ');
+                for(var i=0;i<arr.length;i++)
+                {
+                    var arr2=arr[i].split('=');
+                    if(arr2[0]==name)
+                    {
+                        var getC = decodeURIComponent(arr2[1]);
+                        return getC;
+                    }
+                }
+
+                return '';
+            }
+            function setCookie(name, value, iDay)
+            {
+                var oDate=new Date();
+
+                oDate.setDate(oDate.getDate()+iDay);
+
+                document.cookie=name+'='+encodeURIComponent(value)+';expires='+oDate;
+            }
+            function removeCookie(name)
+            {
+                setCookie(name,'0',-1);
+            }
+            var val=getCookie("name");
+            if(val=="0"||val==""){
+                $(".login_succe").css("display","none");
+                $(".login_no").css("display","block");
+            }else{
+                $(".login_no").css("display","none");
+                $(".login_succe").css("display","block");
+                $("#uname").html(val);
+            }
+
+            $(".out").on("click",function(){
+                removeCookie("name");
+                location.reload();
+            })
+            var title1=$("title").html();
+            if(title1=="登录"||title1=="注册"){
+                $(".login_no").css("display","none");
+            }
+        })
+    </script>
