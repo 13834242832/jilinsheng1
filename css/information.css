@@ -21,10 +21,9 @@
     overflow: hidden;
 }
 .section1>p{
-    height:50px;
-}
-.section1>p span{
-    line-height:50px;
+    font-size:18px;
+    padding-top:26px;
+    margin-bottom: 10px;
 }
 .part1{
     float:left;

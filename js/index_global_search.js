@@ -64,7 +64,6 @@ $(function(){
             }
         });
         function success_jsonpCallback(data){
-
             var bwg=data["sql1"].length+data["sql11"].length;
             var sz=data["sql2"].length+data["sql21"].length;
             var cp=data["sql3"].length+data["sql31"].length;
@@ -81,15 +80,17 @@ $(function(){
             $(".part1 ul li:nth-child(8)").find("u").html(ls);
             var datas=[];
             for(var k in data){
-                datas=datas.concat(data[k])
+                datas=datas.concat(data[k]);
             }
+            var sj=select(key1,key2,datas);
             var lens=datas.length
+            if(lens==0){
+                $(".content").prepend("<p style='text-align: center'>对不起没有找到与 '"+key6+"' 相关的内容，请换个关键词搜索</p>")
+            }
             $(".part1 ul li:first-child").find("u").html(lens);
 
             $(".top2>span u").html($(".part1 ul li.active span>u").html());
-           var sj=select(key1,key2,datas);
-           showData(sj);
-
+            showData(sj);
         }
     }
     search(key6);
@@ -106,7 +107,7 @@ $(function(){
     });
 })
 //数据过滤
-function filter(property,val,data){
+function filters(property,val,data){
     var output=[];
     for(var i=0,len=data.length;i<len;i++){
         var kw=data[i][property];
@@ -114,15 +115,27 @@ function filter(property,val,data){
             output.push(data[i]);
         }
         else if(val=="全部"||val=="所有结果"){
-            output=data;
+            function unique(arr){
+                var hash={};
+                var data=[];
+                for(var i=0,l=arr.length;i<l;i++){
+                    if(!hash[arr[i].NAME]){
+                        hash[arr[i].NAME]=true;
+                        data.push(arr[i])
+                    }
+                }
+                return data
+            }
+            var a=unique(data);
+            output=a;
         }
     }
     return output;
 }
 //多条件查询
 function select(key1,key2,datas){
-    var data=filter("JGFL",key1,datas);
-    data=filter("CXFW",key2,data);
+    var data=filters("JGFL",key1,datas);
+    data=filters("CXFW",key2,data);
     return data;
 }
 //显示数据

@@ -17,8 +17,9 @@
     padding-bottom: 50px;
 }
 .wrapper>p{
-    font-size:16px;
-    padding:30px 0;
+    font-size:18px;
+    padding-top:26px;
+    margin-bottom: 10px;
 }
 .banner { float:left;position: relative; overflow: auto;left:180px; text-align: center;}
 .banner li { list-style: none; }

@@ -33,6 +33,23 @@ $(function(){
     });
     $.ajax({
         type:'GET',
+        url:"data/digitization/3d.json",
+        dataType:"text",
+        success:function(json){
+            var datas=eval(json);
+            for(var k in datas){
+                $("[data-3dname='" + k + "'] u").html(datas[k].FNAME).parent().prev()
+                    .attr("href", "appreciate_details.html?ID=" + datas[k].FGUID + "").attr("target","_blank");
+                var s=parseInt(k)+1;
+                $("[data-3dname='" + k + "']").parent().find("img")
+                    .attr('src',datas[k].FPIC);
+
+            }
+        }
+
+    });
+    $.ajax({
+        type:'GET',
         url:"data/appreciate/treasure.json",
         dataType:"text",
         success:function(json){

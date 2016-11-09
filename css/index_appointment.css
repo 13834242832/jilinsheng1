@@ -22,10 +22,8 @@
     position: relative;
 }
 .wrapper>p{
-    height:25px;
-    font-size:16px;
-    padding:15px 0;
-    color:#eee;
+    font-size:18px;
+    padding-top:26px;
 }
 .content{
     width:500px;

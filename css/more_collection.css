@@ -16,25 +16,6 @@ a.active {
 .auto{
     height:auto;
 }
-/*.more{*/
-     /*text-align:right;*/
-     /*line-height:50px;*/
-     /*position:absolute;*/
-     /*right:0px;*/
-     /*top:0px;*/
-     /*cursor: hand;*/
- /*}*/
-/*.more span{*/
-    /*transform:rotate(0deg);*/
-    /*transition:transform 0.3s linear;*/
-/*}*/
-/*.more:hover{*/
-    /*cursor: pointer;*/
-/*}*/
-/*.more .btn{*/
-    /*display:inline-block;*/
-    /*transform: rotate(90deg);*/
-/*}*/
 .section1{
     width:1400px;
     margin:0 auto;
@@ -42,10 +23,8 @@ a.active {
     border-bottom: 3px solid #eee;
 }
 .section1>p{
-    height:50px;
-}
-.section1>p span{
-    line-height:50px;
+    font-size:18px;
+    padding-top:26px;
 }
 .common{
     font-size:20px;

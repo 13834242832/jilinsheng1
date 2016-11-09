@@ -19,7 +19,11 @@ $.ajax({
         $(".msg_box tr:nth-child(2) td:nth-child(2) span").html(data.MID);
         $(".msg_box tr:nth-child(3) td:nth-child(1) span").html(data.FSIZE);
         $(".brief_content").html(data.FCOLLECT);
-        $(".msg a").attr("href",data.FUPCONTENT);
+        if(data.FUPCONTENT){
+            $(".msg a").attr("href",data.FUPCONTENT);
+            $(".msg a").css("display","block");
+        }
+
         //点击分享
         var text=$(".brief_content").html().substring(0,100);
         $(".share").on("mouseover",function(){
@@ -48,8 +52,10 @@ $.ajax({
     url:"data/appreciate/treasure_Like.json",
     dataType:"text",
     success:function(json){
-        var datas=eval(json);
+        var datas=eval("(" + json + ")");
+        console.log(datas);
         var data = filter("FGUID", id, datas);
+        console.log(data);
         for(var k=0;k<7;k++){
             if(data[k]){
                 var a=$(".hot ul");

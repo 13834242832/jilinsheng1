@@ -22,10 +22,8 @@ button{
     margin-bottom: 50px;
 }
 .wrapper>p{
-    height:50px;
-}
-.wrapper>p span{
-    line-height:50px;
+    font-size:18px;
+    padding-top:26px;
 }
 .content {
     width:1300px;

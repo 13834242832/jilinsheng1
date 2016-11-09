@@ -22,10 +22,9 @@ button{
     overflow: hidden;
 }
 .wrapper>p{
-    height:50px;
-}
-.wrapper>p span{
-    line-height:50px;
+    font-size:18px;
+    padding-top:26px;
+    margin-bottom: 10px;
 }
 .section1{
     float:left;

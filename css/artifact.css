@@ -21,7 +21,8 @@
 }
 
 .hot p{
-    height:20px;
+    font-size:18px;
+    padding-top:26px;
 }
 .hot p span{
     line-height:20px;

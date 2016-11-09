@@ -11,10 +11,8 @@
     border-bottom: 3px solid #eee;
 }
 .section1>p{
-    height:50px;
-}
-.section1>p span{
-    line-height:50px;
+    font-size:18px;
+    padding-top:26px;
 }
 .common{
     font-size:20px;
@@ -163,7 +161,7 @@
 /*////////*/
 .content{
     width:1550px;
-    padding-top:54px;
+    padding-top:30px;
     overflow:hidden;
 }
 .img_list{
@@ -175,7 +173,7 @@
     position:relative;
     width:208px;
     height:152px;
-    margin-right:33px;
+    margin-right:31px;
     margin-bottom:38px;
 }
 .img_list li:nth-child(6){
