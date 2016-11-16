@@ -23,7 +23,8 @@
             $(".morec").on("click",function(e){
                 e.preventDefault()
                 location.href="more_collection.html?gp1=全部&gp2=全部&gp3="+data.FMUSEUMNAME+"&gp4=全部&gp5=全部&kw=all&time=0&hot=0"
-            })
+            });
+            $(".information_link").attr("href","more_information.html?CLASS=展览资讯&ly="+data.FMUSEUMNAME).attr("target","_blank");
             $(".wrapper>p span u").html(data.FMUSEUMNAME);
             $(".wrapper h3").html(data.FMUSEUMNAME);
             $(".jb").html(data.FMLEVEL);

@@ -41,12 +41,27 @@ $.ajax({
     dataType:"text",
     success:function(json){
         var datas=eval("("+json+")");
-        $(".newsimg img").attr("src",datas[0].TPIC1);
-        $('.newsinf h4 a').html(datas[0].NAME).parent().next("h6").html(datas[0].TIME).next("p").html(datas[0].FBRIEF);
-        $('.newsinf h5 a').attr("href","information_details.html?ID="+datas[0].ID).attr("target","_blank");
-        for(var k=1;k<16;k++){
-            $(".zh .content ul li").eq(k-1).find('a').attr("href","information_details.html?ID="+datas[k].ID).attr("target","_blank").html(datas[k].NAME).next("span").html(datas[k].TIME);
+        $(".module>p span").on("click",function(){
+            var tabword=$(this).html();
+            if(tabword=="博物馆快讯"){
+                location.href="more_information.html?CLASS=博物馆动态&ly=all";
+            }
+            else if(tabword=="业内动态"){
+                location.href="more_information.html?CLASS=业内动态&ly=all";
+            }
+        })
+        show(datas);
+        function show(datas){
+            $(".newsimg img").attr("src",datas[0].TPIC1);
+            $('.newsinf h4 a').html(datas[0].NAME).parent().next("h6").html(datas[0].TIME).next("p").html(datas[0].FBRIEF);
+            $('.newsinf h5 a').attr("href","information_details.html?ID="+datas[0].ID).attr("target","_blank");
+            for(var k=1 ; k<16 ; k++){
+                if(datas[k]){
+                    $(".zh .content ul li").eq(k-1).find('a').attr("href","information_details.html?ID="+datas[k].ID).attr("target","_blank").html(datas[k].NAME).next("span").html(datas[k].TIME);
+                }
+            }
         }
+
     }
 })
 $.ajax({

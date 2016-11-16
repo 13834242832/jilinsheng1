@@ -137,6 +137,8 @@
 }
 .module>p span{
     float:left;
+    margin-right:20px;
+    cursor:pointer;
 }
 .module>p a{
     float:right;
