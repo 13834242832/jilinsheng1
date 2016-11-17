@@ -145,12 +145,16 @@ function showData(datas,key1,key2,key4,key5){
     }
     var len=datas.length;
     $(".modultop>p span").html(len);
-    $(".pager").pager({
-        pageIndex:0,
-        pageSize:limit,
-        itemCount:len,
-        maxButtonCount:5,
-    });
+    if(len==0){
+        $('.pager').hide();
+    }else{
+        $(".pager").pager({
+            pageIndex:0,
+            pageSize:limit,
+            itemCount:len,
+            maxButtonCount:5
+        });
+    }
     $(".content ul").html(" ");
     for(var i=0;i<limit;i++){
         var a=$(".content ul");

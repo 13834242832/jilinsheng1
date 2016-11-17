@@ -1,6 +1,4 @@
-    <head>
-        <lin src="."></lin>
-    </head>
+<script src="layer/layer.js"></script>
     <div id="logo">
         <img src="img/logo_index.png">
     </div>
@@ -10,7 +8,7 @@
             <ul class="login_no">
                 <li class="login"><a href="index_login.html">登录</a></li>
                 <li class="register"><a href="index_register.html">注册</a></li>
-                <li><a href="index_appointment.html" target="_blank">预约</a></li>
+                <li><a class="yuyue">预约</a></li>
             </ul>
             <div class="login_succe">
                 <p><a href="index_userinfo.html" id="uname"></a>欢迎您！ <a class="out">退出</a>&nbsp;&nbsp;&nbsp;<a href="index_appointment.html">预约</a></p>
@@ -86,6 +84,15 @@
             var title1=$("title").html();
             if(title1=="登录"||title1=="注册"){
                 $(".login_no").css("display","none");
-            }
+            };
+            $(".yuyue").on("click",function(e){
+                e.preventDefault();
+                if(val=="0"||val==""){
+                    layer.alert("请先登录！",{icon:0});
+                }else{
+                    $(this).attr("href","index_appointment.html").attr("target","_blank")
+                }
+            })
+
         })
     </script>

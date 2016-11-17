@@ -151,7 +151,6 @@ $(function(){
             }
 
         }
-
         return data
     }
     //显示数据
@@ -163,13 +162,18 @@ $(function(){
             datas=px("热度",key5,datas);
         }
         datas=px("级别","3",datas);
-        $(".modultop>p span").html(datas.length)
-        $(".pager").pager({
-            pageIndex:0,
-            pageSize:limit,
-            itemCount:datas.length,
-            maxButtonCount:5
-        });
+        var len=datas.length;
+        $(".modultop>p span").html(len)
+        if(len==0){
+            $('.pager').hide();
+        }else{
+            $(".pager").pager({
+                pageIndex:0,
+                pageSize:limit,
+                itemCount:len,
+                maxButtonCount:5
+            });
+        }
         $("[data-treasure]").html(" ");
         for(var k in datas){
             if(datas[k]){
@@ -214,7 +218,6 @@ $(function(){
                 var value1 = parseInt(object1[propertyName]);
                 var value2 = parseInt(object2[propertyName]);
             }
-
             if (value2 < value1) {
                 return -1;
             }
@@ -240,7 +243,6 @@ $(function(){
                 var value1 = parseInt(object1[propertyName]);
                 var value2 = parseInt(object2[propertyName]);
             }
-
             if (value2 < value1) {
                 return 1;
             }

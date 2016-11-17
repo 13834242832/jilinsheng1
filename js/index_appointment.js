@@ -46,21 +46,20 @@ $("tbody .id").bind("input propertychange",function(){
     }else{
         $(this).next("p").html(" ").hide();
     }
-    var key0=$(this).parent().prev("td").find("p").css("display");
+    var key0=$(this).parent().prev().prev().find("p").css("display");
     var key=$(this).next("p").css("display");
+    console.log(key)
     var key1=$("#date").val();
     if(key1){
         if(key0=="none"){
             if(key=="none"){
-                $("#submit").css({
-                    background:"#908062",
-                    color:"#fff"
-                }).attr("disabled",false);
+                $("#submit").attr("disabled",false).css({background:"#928264",color:"#fff"})
             }
         }
     }
 
-})
+});
+$("#LAY_layuipro").css("height","448px")
 //post发送的数据
 $(".content").delegate("#submit",'click',function(){
     var a=$("#museum option:selected").html();
@@ -82,7 +81,7 @@ $(".content").delegate("#submit",'click',function(){
         user.push({"uname":uname3,"uid":uid3})
     }
     var FUserName=getCookie("name");
-    if(FUserName==""){
+    if(!FUserName){
         layer.alert("请先登录！",{icon:2});
         return;
     }
@@ -111,10 +110,39 @@ $(".content").delegate("#submit",'click',function(){
             layer.alert(data.message,{icon:0});
         }
         else{
-            layer.alert(data.message+"返回上一级页面！",{icon:1},function(){
-                history.go(-1);
+            layer.open({
+                type: 1
+                ,title: false //不显示标题栏
+                ,closeBtn: false
+                ,area:["500px","500px"]
+                ,shade: 0.8
+                ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                ,resize: false
+                ,btn: ['确认']
+                ,btnAlign:'a'
+                ,moveType: 1 //拖拽模式，0或者1
+                ,content: '<div style="padding:50px;"><p>尊敬的tom，您已成功预约参展预约信息已发送至您的邮箱123123132@qq.com具体信息如下：</p>' +
+                '<table>' +
+                '<tbody>' +
+                '<tr>' +
+                '<td>预约地点：</td><td></td>' +
+                '<td>预约时间：</td><td></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>预约人1：</td><td></td>' +
+                '<td>预约码：</td><td></td>' +
+                '</tr>' +
+                '</tbody>' +
+                '</table>' +
+                '</div>'
+                ,success: function(layero){
+                    // var btn = layero.find('.layui-layer-btn');
+                    // btn.find('.layui-layer-btn0').attr({
+                    //     href: 'http://www.layui.com/'
+                    //     ,target: '_blank'
+                    // });
+                }
             });
-
         }
     }
 })

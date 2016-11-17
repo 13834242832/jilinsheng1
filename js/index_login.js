@@ -35,26 +35,29 @@ $("#sub").on('click',function(){
         }
     });
     function success_jsonpCallback(data){
-        var name=data["sql2"][0].FWEBUSERNAME;
-        function setCookie(name, value, iDay)
-        {
-            var oDate=new Date();
-            oDate.setDate(oDate.getDate()+iDay);
-            document.cookie=name+'='+encodeURIComponent(value)+';expires='+oDate;
+        console.log(data);
+        if(data["sql2"]){
+            var name=data["sql2"][0].FWEBUSERNAME;
+            function setCookie(name, value, iDay)
+            {
+                var oDate=new Date();
+                oDate.setDate(oDate.getDate()+iDay);
+                document.cookie=name+'='+encodeURIComponent(value)+';expires='+oDate;
+            }
+            setCookie("name",name,7);
+            if(data["sql2"][0].STATE=="success"){
+                layer.alert(data["sql2"][0].MESSAGE+"返回上一级页面！",{icon: 1},function () {
+                    var reg=/register/;
+                    if(reg.test(parent.location.href)){
+                        location.href="index.html"
+                    }else{
+                        history.go(-1);
+                    }
+                });
+
+            }
+        }else{
+            layer.alert("用户名或者密码错误！",{icon: 1});
         }
-        setCookie("name",name,7);
-        if(data["sql2"][0].STATE=="success"){
-            layer.alert(data["sql2"][0].MESSAGE+"返回上一级页面！",{icon: 1},function () {
-                var reg=/register/;
-                if(reg.test(parent.location.href)){
-                    location.href="index.html"
-                }else{
-                    history.go(-1);
-                }
-            });
-
-        }
-
-
      }
 })

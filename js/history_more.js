@@ -13,12 +13,16 @@ $.ajax({
         $(".section2>p span").html(fcolumn);
         var len=datas.length;
         var limit=16;
-        $(".pager").pager({
-            pageIndex:0,
-            pageSize:limit,
-            itemCount:len,
-            maxButtonCount:4,
-        });
+        if(len==0){
+            $('.pager').hide();
+        }else{
+            $(".pager").pager({
+                pageIndex:0,
+                pageSize:limit,
+                itemCount:len,
+                maxButtonCount:5
+            });
+        }
         $(".table_content ul li").html(" ");
         for(var i=0;i<limit;i++){
             var a=$(".table_content ul li");

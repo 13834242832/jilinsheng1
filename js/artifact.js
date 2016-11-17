@@ -74,12 +74,17 @@ function total(datas){
         datas=px("热度",key5,datas);
     }
     var limit=15;
-    $(".pager").pager({
-        pageIndex:0,
-        pageSize:limit,
-        itemCount:datas.length,
-        maxButtonCount:5,
-    });
+    var len=datas.length;
+    if(len==0){
+        $('.pager').hide();
+    }else{
+        $(".pager").pager({
+            pageIndex:0,
+            pageSize:limit,
+            itemCount:len,
+            maxButtonCount:5
+        });
+    }
     showData(datas,limit)
     //点击分类
     $(".top ul li a").on("click",function(e){

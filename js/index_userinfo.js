@@ -68,8 +68,19 @@ function getuserinfo(){
                         jsonpCallback:"success_jsonpCallback",
                         data:{"params":result},
                         success:function(json){
+                            success_jsonpCallback(json);
+                            function success_jsonpCallback(datas){
+                                if(datas["state"]=="success"){
+                                    layer.alert("修改成功！",{icon:1},function(){
+                                        location.href="index_userinfo.html";
+                                    });
+                                }else{
+                                    layer.alert("修改失败！",{icon:2},function(){
+                                        location.href="index_userinfo.html";
+                                    });
+                                }
 
-
+                            }
                         }
                     })
                 })
@@ -84,12 +95,16 @@ function getuserinfo(){
                 var collection1=filter("FCOLLECTIONTYPE","藏品点收藏",collection)
                 var len=collection1.length;
                 var limit=10;
-                $(".pager").pager({
-                    pageIndex:0,
-                    pageSize:limit,
-                    itemCount:len,
-                    maxButtonCount:4,
-                });
+                if(len==0){
+                    $('.pager').hide();
+                }else{
+                    $(".pager").pager({
+                        pageIndex:0,
+                        pageSize:limit,
+                        itemCount:len,
+                        maxButtonCount:5
+                    });
+                }
                 showData(collection1);
                 $(".collect_content ul li").on("click",function(){
                     $(this).addClass("active").siblings().removeClass("active");

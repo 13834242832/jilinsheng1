@@ -18,12 +18,16 @@ $.ajax({
         console.log(data);
         var len=data.length;
         var limit=22;
-        $(".pager").pager({
-            pageIndex:0,
-            pageSize:limit,
-            itemCount:len,
-            maxButtonCount:4,
-        });
+        if(len==0){
+            $('.pager').hide();
+        }else{
+            $(".pager").pager({
+                pageIndex:0,
+                pageSize:limit,
+                itemCount:len,
+                maxButtonCount:5
+            });
+        }
         $("table tbody tr td").html(" ");
         for(var i=0;i<limit;i++){
             if(data[i]){

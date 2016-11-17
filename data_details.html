@@ -71,6 +71,16 @@
     <script>
         $("#header").load("include/head.html",function(){
             $("#nav ul li:nth-child(7)").addClass("navactived").siblings().removeClass('navactived')
+
+            $(".yuyue").on("click",function(e){
+                e.preventDefault();
+                if(val=="0"||val==""){
+                    layer.alert("请先登录！",{icon:0});
+                }else{
+                    $(this).attr("href","index_appointment.html").attr("target","_blank")
+                }
+            })
+
         });
         $("#footer").load("include/footer.html");
     </script>
