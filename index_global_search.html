@@ -98,19 +98,14 @@
 
     <div id="footer"></div>
     <script>
-        $("#header").load("include/head.html");
+        $("#header").load("include/head.html",function () {
+            var key6=decodeURI(location.search.split("&")[3].split("=")[1]);
+            $("#searchbox").val(key6);
+        });
         $("#footer").load("include/footer.html");
     </script>
     <script src="js/jquery.pager.js"></script>
     <script src="layer/layer.js"></script>
     <script src="js/index_global_search.js"></script>
-    <!--<script>-->
-        <!--$(".pager").pager({-->
-            <!--pageIndex:0,-->
-            <!--pageSize:2,-->
-            <!--itemCount:400,-->
-            <!--maxButtonCount:4,-->
-        <!--});-->
-    <!--</script>-->
 </body>
 </html>

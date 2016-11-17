@@ -36,7 +36,7 @@
         $(function(){
             $("#search").on("click",function(){
                 if($(this).prev().val()==""){
-                    alert("请输入搜内容！");
+                    alert("请输入搜索的内容！");
                     return;
                 }else{
                     window.open("index_global_search.html?gp=全部&gp=所有结果&gp=时间不限&kw="+$(this).prev().val(),"_blank");

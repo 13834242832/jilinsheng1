@@ -13,7 +13,7 @@ $.ajax({
 
 })
 $("#adduser").on("click",function(){
-    $(".msg tbody").append("<tr><td>预约人3：</td><td><input class=\"name\" type=\"text\" name='uname3' id='uname3' placeholder='请输入真实姓名' onfocus=\"this.placeholder=''\" onblur=\"this.placeholder='请输入真实姓名'\"><p></p></td><td><input class=\"id\" name=\"uid3\" id=\"uid3\" placeholder=\"请输入身份证号码\" onfocus=\"this.placeholder=''\" onblur=\"this.placeholder='请输入身份证号码'\"><p></p></td></tr>")
+    $(".msg tbody").append("<tr><td>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td><td><input class=\"name\" type=\"text\" name='uname3' id='uname3' placeholder='请输入真实姓名' onfocus=\"this.placeholder=''\" onblur=\"this.placeholder='请输入真实姓名'\"><p></p></td><td style='padding-left:20px;'>证件号码：</td><td><input class=\"id\" name=\"uid3\" id=\"uid3\" placeholder=\"请输入身份证号码\" onfocus=\"this.placeholder=''\" onblur=\"this.placeholder='请输入身份证号码'\"><p></p></td></tr>")
     $(this).hide();
 })
 
@@ -52,7 +52,10 @@ $("tbody .id").bind("input propertychange",function(){
     if(key1){
         if(key0=="none"){
             if(key=="none"){
-                $("#submit").css("background","#005751").attr("disabled",false);
+                $("#submit").css({
+                    background:"#908062",
+                    color:"#fff"
+                }).attr("disabled",false);
             }
         }
     }
@@ -108,8 +111,10 @@ $(".content").delegate("#submit",'click',function(){
             layer.alert(data.message,{icon:0});
         }
         else{
-            layer.alert(data.message,{icon:1});
-            history.go(-1);
+            layer.alert(data.message+"返回上一级页面！",{icon:1},function(){
+                history.go(-1);
+            });
+
         }
     }
 })
