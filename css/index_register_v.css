@@ -1,0 +1,82 @@
+#main{
+    width:1920px;
+    height:638px;
+    background: #1b1b1b;
+    font-size:18px;
+    color:#eee;
+}
+#main a{
+    color:#bbb;
+}
+#main a:hover{
+    color:#eee;
+}
+.top{
+    height:107px;
+    display: table-cell;
+    vertical-align: bottom;
+    color:#fff;
+    width:1920px;
+}
+.top p{
+    float:left;
+    margin-left:212px;
+    font-size:20px;
+}
+.top h3{
+    float:left;
+    letter-spacing:20px;
+    margin-left:522px;
+    font-size:24px;
+}
+.top h4{
+    float:left;
+    margin-left:462px;
+    margin-right:20px;
+}
+.top button{
+    float:left;
+    outline: none;
+    border:none;
+    width:87px;
+    height:22px;
+    font-size:12px;
+    border-radius: 11px;
+    color:#fff;
+    background:#8e0508;
+    font-family:微软雅黑, Helvetica, Arial, sans-serif;
+}
+.content{
+    width:1400px;
+    margin:0 auto;
+    margin-top:175px;
+    font-size:18px;
+}
+.content p,.content h4{
+    text-align: center;
+}
+.content p{
+    margin-bottom:20px;
+}
+.content p span{
+    font-size:24px;
+    color:#d7bf79;
+}
+.content h4{
+    margin-bottom:78px;
+}
+.content div{
+    margin:0 auto;
+    text-align: center;
+}
+.content div button{
+    outline:none;
+    width:190px;
+    height:50px;
+    border-radius: 2px;
+    background:#d7bf79;
+    border:none;
+    font-family:"Microsoft YaHei UI";
+    font-size:22px;
+    color:#fff;
+}

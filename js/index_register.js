@@ -9,7 +9,7 @@ function checkUsername(){
     var usermail=$("#usermail").val();
     var userpwd=$("#userpwd").val();
     var qrpwd=$("#qrpwd").val();
-
+//用户名：
     $("#username").on("focus",function(){
         var val=$(this).val();
         if(val.length==0){
@@ -36,6 +36,7 @@ function checkUsername(){
             arr.uname=0;
         }
     })
+    //邮箱
     $("#usermail").on("focus",function(){
         var val=$(this).val();
         if(val.length==0){
@@ -58,6 +59,7 @@ function checkUsername(){
             arr.umail=0;
         }
     })
+    //密码
     $("#userpwd").on("focus",function(){
         var val=$(this).val();
         if(val.length==0){
@@ -85,6 +87,7 @@ function checkUsername(){
         }
 
     })
+    //确认密码
     $("#qrpwd").on("focus",function(){
         var val=$(this).val();
         if(val.length==0){
@@ -121,8 +124,7 @@ function checkUsername(){
             var result={
                 "username":name,
                 "userpwd":pwd,
-                "usermail":mail,
-                "FState":"1"
+                "usermail":mail
             };
             for(var k in arr){
                 arr1.push(arr[k])
@@ -146,15 +148,16 @@ function checkUsername(){
                     dataType:'JSONP',
                     jsonp: "jsoncallback",
                     jsonpCallback:"success_jsonpCallback",
-                    data:{"params":result},
+                    data:{"params":result,"FState":"1"},
                     success:function(json){
                         success_jsonpCallback(json);
                     }
                 });
                 function success_jsonpCallback(data){
-                    console.log(data)
-                    if(data=="success"){
-                        layer.alert("注册成功！",{icon:1});
+                    if(data["state"]=="success"){
+                        layer.alert("注册成功！",{icon:1},function(){
+                            location.href="index_register_next.html"
+                        });
                     }else{
                         layer.alert("注册失败！用户名已存在！",{icon:0});
                     }
@@ -164,17 +167,13 @@ function checkUsername(){
                 $("#sub").attr("disabled","true");
                 return
             }
-
             function pinfo(key,val){
                 if(val){
                     result[key]=val;
                 }
             }
-
-
         })
     }
-
 }
 checkUsername();
 $(".login").on("click",function(){
