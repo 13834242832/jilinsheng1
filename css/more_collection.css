@@ -73,15 +73,20 @@ a.active {
     cursor:pointer;
 }
 .more span{
-    transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+            transform:rotate(0deg);
+    -webkit-transition:-webkit-transform 0.3s linear;
+    transition:-webkit-transform 0.3s linear;
     transition:transform 0.3s linear;
+    transition:transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 .common .more:hover{
     cursor: pointer;
 }
 .more .btn{
     display:inline-block;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 /*.group4{*/
 /*margin-bottom: 44px;*/

@@ -138,7 +138,8 @@ a:hover{
     position: absolute;
     transform: translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
-    -ms-transform:translate(-50%,-50%);;
+    -ms-transform:translate(-50%,-50%);
+    -webkit-transition:all .2s linear;;
     transition:all .2s linear;
     overflow: hidden;
 }
@@ -539,6 +540,23 @@ z-index: 20;
     -webkit-animation-delay: 0s;/*动画延迟时间*/
     -webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
     -webkit-animation-direction: normal;/*定义动画方式*/
+}
+
+@-webkit-keyframes ripple {
+    0% {
+        left:5px;
+        top:5px;
+        opcity:0.8;
+        width:0;
+        height:0;
+    }
+    100% {
+        left:-10px;
+        top:-10px;
+        opacity: 0;
+        width:30px;
+        height:30px;
+    }
 }
 
 @keyframes ripple {

@@ -45,6 +45,7 @@ button{
     outline:none;
     margin-bottom:20px;
     font-family:微软雅黑;
+    -webkit-transition:all .2s linear;
     transition: all .2s linear;
 }
 
@@ -87,6 +88,7 @@ button{
     background:#1b1b1b;
     border-left:none;
     text-align: center;
+    -webkit-transition:all .2s linear;
     transition:all .2s linear;
 }
 .part2 div{

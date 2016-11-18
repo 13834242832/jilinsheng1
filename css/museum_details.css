@@ -702,7 +702,6 @@ a:hover{
     opacity: .4;
     background: #ffffff;;
     -webkit-transition: background .5s, opacity .5s;
-    -moz-transition: background .5s, opacity .5s;
     transition: background .5s, opacity .5s;
 }
 #b05 .dots li.active

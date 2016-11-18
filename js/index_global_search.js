@@ -155,37 +155,37 @@ function showData(datas){
         if(datas[k]&&datas){
             if(datas[k].JGFL=="博物馆一览"){
                 $(".content ul").append("<li class='msgimgtext'><a href='museum_details.html?ID="+datas[k].MID+"'><img src='"+datas[k].PICPHOTO1+"' width='207px' height='154px'></a><div class='msg'><h2>"+datas[k].FMUSEUMNAME+"</h2><h3>地址：<span>"+datas[k].FDETAILADDRESS+"</span></h3><h5>开放时间：<span>"+datas[k].KFSJ+"</span></h5><div>"+datas[k].FMUSEUMBRIEF+"</div></div></li>")
-                $(".part1 ul li:nth-child(2)").find("u").html(datas.length);
+                // $(".part1 ul li:nth-child(2)").find("u").html(datas.length);
                 $(".top2>span u").html($(".part1 ul li.active span>u").html());
             }
             else if(datas[k].JGFL=="数字博物馆"){
                 $(".content ul").append("<li class='msgimgtext'><a href='digitization_details.html?id="+datas[k].FGUID+"'><img src='"+datas[k].FPIC+"' width='207px' height='154px'></a><div class='msg'><h2>"+datas[k].FNAME+"</h2><h3>类型：<span>"+datas[k].FSTYLE+"</span></h3><h5>评分：<span>"+datas[k].FSCORE+"</span></h5><div>"+datas[k].FBRIEF+"</div></div></li>");
-                $(".part1 ul li:nth-child(3)").find("u").html(datas.length);
+                // $(".part1 ul li:nth-child(3)").find("u").html(datas.length);
                 $(".top2>span u").html($(".part1 ul li.active span>u").html());
             }
             else if(datas[k].JGFL=="藏品鉴赏"){
                 $(".content ul").append("<li class='msgimgtext'><a href='appreciate_details.html?ID="+datas[k].FGUID+"'><img src='"+datas[k].FPICADDRESS+"' width='207px' height='154px'></a><div class='msg'><h2>"+datas[k].FCOLLECTIONCNAME+"</h2><h3>类型：<span>"+datas[k].FCOLLECTIONTYPE+"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;藏品年代：<span>"+datas[k].FYEAR+"</span></h3><h5>规格：<span>"+datas[k].FSIZE+"</span></h5><div>"+datas[k].FCOLLECT+"</div></div></li>");
-                $(".part1 ul li:nth-child(4)").find("u").html(datas.length);
+                // $(".part1 ul li:nth-child(4)").find("u").html(datas.length);
                 $(".top2>span u").html($(".part1 ul li.active span>u").html());
             }
             else if(datas[k].JGFL=="文创产品"){
                 $(".content ul").append("<li class='msgimgtext'><a href='artifact_details.html?ID="+datas[k].ID+"'><img src='"+datas[k].FPRODUCTPIC1+"' width='207px' height='154px'></a><div class='msg'><h2>"+datas[k].NAME+"</h2><h3>材质：<span>"+datas[k].FMATERIAL+"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类别：<span>"+datas[k].FTYPE+"</span></h3><h5>规格：<span>"+datas[k].FSIZE+"</span></h5><div>"+datas[k].FPRODUCTBRIEF+"</div></div></li>");
-                $(".part1 ul li:nth-child(5)").find("u").html(datas.length);
+                // $(".part1 ul li:nth-child(5)").find("u").html(datas.length);
                 $(".top2>span u").html($(".part1 ul li.active span>u").html());
             }
             else if(datas[k].JGFL=="资讯"){
                 $(".content ul").append("<li class='msgtext'><h4>"+datas[k].NAME+"</h4><p>"+datas[k].FBRIEF+"</p><div><a href='information_details.html?ID="+datas[k].ID+"'>information_details.html?ID="+datas[k].ID+"</a><span>"+datas[k].TIME+"</span></div></li>")
-                $(".part1 ul li:nth-child(6)").find("u").html(datas.length);
+                // $(".part1 ul li:nth-child(6)").find("u").html(datas.length);
                 $(".top2>span u").html($(".part1 ul li.active span>u").html());
             }
             else if(datas[k].JGFL=="学术"){
                 $(".content ul").append("<li class='msgtext'><h4>"+datas[k].NAME+"</h4><p>"+datas[k].FBRIEF+"</p><div><a href='information_details.html?ID="+datas[k].ID+"'>information_details.html?ID="+datas[k].ID+"</a><span>"+datas[k].TIME+"</span></div></li>")
-                $(".part1 ul li:nth-child(7)").find("u").html(datas.length);
+                // $(".part1 ul li:nth-child(7)").find("u").html(datas.length);
                 $(".top2>span u").html($(".part1 ul li.active span>u").html());
             }
             else if(datas[k].JGFL=="历史吉林"){
                 $(".content ul").append("<li class='msgtext'><h4>"+datas[k].NAME+"</h4><p>"+datas[k].FBRIEF+"</p><div><a href='history_culture_details.html?ID="+datas[k].ID+"'>history_culture_details.html?ID"+datas[k].ID+"</a><span>"+datas[k].TIME+"</span></div></li>")
-                $(".part1 ul li:nth-child(8)").find("u").html(datas.length);
+                // $(".part1 ul li:nth-child(8)").find("u").html(datas.length);
                 $(".top2>span u").html($(".part1 ul li.active span>u").html());
             }
 

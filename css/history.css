@@ -36,7 +36,6 @@
     background:#f8f7dc;
     position:relative;
     -webkit-transition: background .5s, opacity .5s;
-    -moz-transition: background .5s, opacity .5s;
     transition: background .5s, opacity .5s;
 }
 .text{

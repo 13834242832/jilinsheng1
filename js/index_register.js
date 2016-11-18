@@ -121,7 +121,8 @@ function checkUsername(){
             var result={
                 "username":name,
                 "userpwd":pwd,
-                "usermail":mail
+                "usermail":mail,
+                "FState":"1"
             };
             for(var k in arr){
                 arr1.push(arr[k])
@@ -151,6 +152,12 @@ function checkUsername(){
                     }
                 });
                 function success_jsonpCallback(data){
+                    console.log(data)
+                    if(data=="success"){
+                        layer.alert("注册成功！",{icon:1});
+                    }else{
+                        layer.alert("注册失败！用户名已存在！",{icon:0});
+                    }
                 }
             }
             else if(a!=-1){

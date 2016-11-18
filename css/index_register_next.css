@@ -1,0 +1,83 @@
+#main{
+    width:1920px;
+    height:638px;
+    background: #1b1b1b;
+    font-size:18px;
+    color:#eee;
+}
+#main a{
+    color:#bbb;
+}
+#main a:hover{
+    color:#eee;
+}
+.top{
+    height:107px;
+    display: table-cell;
+    vertical-align: bottom;
+    color:#fff;
+    width:1920px;
+}
+.top p{
+    float:left;
+    margin-left:212px;
+    font-size:20px;
+}
+.top h3{
+    float:left;
+    letter-spacing:20px;
+    margin-left:522px;
+    font-size:24px;
+}
+.top h4{
+    float:left;
+    margin-left:462px;
+    margin-right:20px;
+}
+.top button{
+    float:left;
+    outline: none;
+    border:none;
+    width:87px;
+    height:22px;
+    font-size:12px;
+    border-radius: 11px;
+    color:#fff;
+    background:#8e0508;
+    font-family:微软雅黑, Helvetica, Arial, sans-serif;
+}
+.content{
+    width:1400px;
+    margin:0 auto;
+    margin-top:95px;
+}
+.content p,.content h4,.content .btn,.content h5,.content h6{
+    text-align: center;
+    font-size:18px;
+    font-weight: normal;
+    color:#fff;
+    margin-bottom:52px;
+}
+.content p{
+    margin-bottom: 25px;
+}
+.content h5{
+    margin-bottom: 18px;
+}
+.btn button{
+    outline:none;
+    width:280px;
+    height:40px;
+    font-family:"Microsoft YaHei UI";
+    border:1px solid #948367;
+    border-radius:2px;
+    font-size:16px;
+    color:#fff;
+    background:transparent;
+}
+.btn button:hover{
+    color:#948367;
+}
+.font-light{
+    color:#948367;
+}

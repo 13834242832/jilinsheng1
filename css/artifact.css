@@ -120,8 +120,6 @@
     background: #1b1b1b;
     border:2px solid #fff;
     font-size:18px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
     border-radius:5px;
 }
 .criteria button{

@@ -198,7 +198,6 @@ li{
     opacity: .4;
     background:#313131;
     -webkit-transition: background .5s, opacity .5s;
-    -moz-transition: background .5s, opacity .5s;
     transition: background .5s, opacity .5s;
 }
 #b05 .dots li.active

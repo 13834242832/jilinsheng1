@@ -30,7 +30,6 @@ body{
     opacity: .4;
     background:#313131;
     -webkit-transition: background .5s, opacity .5s;
-    -moz-transition: background .5s, opacity .5s;
     transition: background .5s, opacity .5s;
 }
 #b05 .dots li.active
@@ -346,9 +345,6 @@ body{
     position:relative;
     left:50%;
     -webkit-transform:translate(-50%,0);
-    -moz-transform: translate(-50%,0) ;
-    -ms-transform: translate(-50%,0) ;
-    -o-transform: translate(-50%,0) ;
     transform: translate(-50%,0) ;
 }
 
