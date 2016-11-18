@@ -22,7 +22,6 @@ $(function(){
                 $(".next a").attr("href","appreciate_month_details.html?ID="+datas[data[0].index+1].FGUID).html(datas[data[0].index+1].FTITLE);
                 $(".prev a").attr("href","appreciate_month_details.html?ID="+datas[data[0].index-1].FGUID).html(datas[data[0].index-1].FTITLE);
             }
-
         }
     });
 })
