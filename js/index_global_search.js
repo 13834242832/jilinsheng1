@@ -63,20 +63,20 @@ $(function(){
             }
         });
         function success_jsonpCallback(data){
-            var bwg=data["sql1"].length+data["sql11"].length;
-            var sz=data["sql2"].length+data["sql21"].length;
-            var cp=data["sql3"].length+data["sql31"].length;
-            var wc=data["sql4"].length+data["sql41"].length;
-            var zx=data["sql5"].length+data["sql51"].length;
-            var xs=data["sql6"].length+data["sql61"].length;
-            var ls=data["sql7"].length+data["sql71"].length;
-            $(".part1 ul li:nth-child(2)").find("u").html(bwg);
-            $(".part1 ul li:nth-child(3)").find("u").html(sz);
-            $(".part1 ul li:nth-child(4)").find("u").html(cp);
-            $(".part1 ul li:nth-child(5)").find("u").html(wc);
-            $(".part1 ul li:nth-child(6)").find("u").html(zx);
-            $(".part1 ul li:nth-child(7)").find("u").html(xs);
-            $(".part1 ul li:nth-child(8)").find("u").html(ls);
+            // var bwg=data["sql1"].length+data["sql11"].length;
+            // var sz=data["sql2"].length+data["sql21"].length;
+            // var cp=data["sql3"].length+data["sql31"].length;
+            // var wc=data["sql4"].length+data["sql41"].length;
+            // var zx=data["sql5"].length+data["sql51"].length;
+            // var xs=data["sql6"].length+data["sql61"].length;
+            // var ls=data["sql7"].length+data["sql71"].length;
+            // $(".part1 ul li:nth-child(2)").find("u").html(bwg);
+            // $(".part1 ul li:nth-child(3)").find("u").html(sz);
+            // $(".part1 ul li:nth-child(4)").find("u").html(cp);
+            // $(".part1 ul li:nth-child(5)").find("u").html(wc);
+            // $(".part1 ul li:nth-child(6)").find("u").html(zx);
+            // $(".part1 ul li:nth-child(7)").find("u").html(xs);
+            // $(".part1 ul li:nth-child(8)").find("u").html(ls);
             var datas=[];
             for(var k in data){
                 datas=datas.concat(data[k]);
@@ -156,37 +156,65 @@ function showData(datas){
             if(datas[k].JGFL=="博物馆一览"){
                 $(".content ul").append("<li class='msgimgtext'><a href='museum_details.html?ID="+datas[k].MID+"'><img src='"+datas[k].PICPHOTO1+"' width='207px' height='154px'></a><div class='msg'><h2>"+datas[k].FMUSEUMNAME+"</h2><h3>地址：<span>"+datas[k].FDETAILADDRESS+"</span></h3><h5>开放时间：<span>"+datas[k].KFSJ+"</span></h5><div>"+datas[k].FMUSEUMBRIEF+"</div></div></li>")
                 // $(".part1 ul li:nth-child(2)").find("u").html(datas.length);
-                $(".top2>span u").html($(".part1 ul li.active span>u").html());
+                $(".top2>span u").html(datas.length);
+                var lens=datas.length
+                if(lens==0){
+                    $(".content").prepend("<p style='text-align: center'>对不起没有找到与 '"+key6+"' 相关的内容，请换个关键词搜索</p>")
+                }
             }
             else if(datas[k].JGFL=="数字博物馆"){
                 $(".content ul").append("<li class='msgimgtext'><a href='digitization_details.html?id="+datas[k].FGUID+"'><img src='"+datas[k].FPIC+"' width='207px' height='154px'></a><div class='msg'><h2>"+datas[k].FNAME+"</h2><h3>类型：<span>"+datas[k].FSTYLE+"</span></h3><h5>评分：<span>"+datas[k].FSCORE+"</span></h5><div>"+datas[k].FBRIEF+"</div></div></li>");
                 // $(".part1 ul li:nth-child(3)").find("u").html(datas.length);
-                $(".top2>span u").html($(".part1 ul li.active span>u").html());
+                $(".top2>span u").html(datas.length);
+                var lens=datas.length
+                if(lens==0){
+                    $(".content").prepend("<p style='text-align: center'>对不起没有找到与 '"+key6+"' 相关的内容，请换个关键词搜索</p>")
+                }
             }
             else if(datas[k].JGFL=="藏品鉴赏"){
                 $(".content ul").append("<li class='msgimgtext'><a href='appreciate_details.html?ID="+datas[k].FGUID+"'><img src='"+datas[k].FPICADDRESS+"' width='207px' height='154px'></a><div class='msg'><h2>"+datas[k].FCOLLECTIONCNAME+"</h2><h3>类型：<span>"+datas[k].FCOLLECTIONTYPE+"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;藏品年代：<span>"+datas[k].FYEAR+"</span></h3><h5>规格：<span>"+datas[k].FSIZE+"</span></h5><div>"+datas[k].FCOLLECT+"</div></div></li>");
                 // $(".part1 ul li:nth-child(4)").find("u").html(datas.length);
-                $(".top2>span u").html($(".part1 ul li.active span>u").html());
-            }
+                $(".top2>span u").html(datas.length);
+                var lens=datas.length
+                if(lens==0){
+                    $(".content").prepend("<p style='text-align: center'>对不起没有找到与 '"+key6+"' 相关的内容，请换个关键词搜索</p>")
+                }
+        }
             else if(datas[k].JGFL=="文创产品"){
                 $(".content ul").append("<li class='msgimgtext'><a href='artifact_details.html?ID="+datas[k].ID+"'><img src='"+datas[k].FPRODUCTPIC1+"' width='207px' height='154px'></a><div class='msg'><h2>"+datas[k].NAME+"</h2><h3>材质：<span>"+datas[k].FMATERIAL+"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类别：<span>"+datas[k].FTYPE+"</span></h3><h5>规格：<span>"+datas[k].FSIZE+"</span></h5><div>"+datas[k].FPRODUCTBRIEF+"</div></div></li>");
                 // $(".part1 ul li:nth-child(5)").find("u").html(datas.length);
-                $(".top2>span u").html($(".part1 ul li.active span>u").html());
+                $(".top2>span u").html(datas.length);
+                var lens=datas.length
+                if(lens==0){
+                    $(".content").prepend("<p style='text-align: center'>对不起没有找到与 '"+key6+"' 相关的内容，请换个关键词搜索</p>")
+                }
             }
             else if(datas[k].JGFL=="资讯"){
                 $(".content ul").append("<li class='msgtext'><h4>"+datas[k].NAME+"</h4><p>"+datas[k].FBRIEF+"</p><div><a href='information_details.html?ID="+datas[k].ID+"'>information_details.html?ID="+datas[k].ID+"</a><span>"+datas[k].TIME+"</span></div></li>")
                 // $(".part1 ul li:nth-child(6)").find("u").html(datas.length);
-                $(".top2>span u").html($(".part1 ul li.active span>u").html());
+                $(".top2>span u").html(datas.length);
+                var lens=datas.length
+                if(lens==0){
+                    $(".content").prepend("<p style='text-align: center'>对不起没有找到与 '"+key6+"' 相关的内容，请换个关键词搜索</p>")
+                }
             }
             else if(datas[k].JGFL=="学术"){
                 $(".content ul").append("<li class='msgtext'><h4>"+datas[k].NAME+"</h4><p>"+datas[k].FBRIEF+"</p><div><a href='information_details.html?ID="+datas[k].ID+"'>information_details.html?ID="+datas[k].ID+"</a><span>"+datas[k].TIME+"</span></div></li>")
                 // $(".part1 ul li:nth-child(7)").find("u").html(datas.length);
-                $(".top2>span u").html($(".part1 ul li.active span>u").html());
+                $(".top2>span u").html(datas.length);
+                var lens=datas.length
+                if(lens==""){
+                    $(".content").prepend("<p style='text-align: center'>对不起没有找到与 '"+key6+"' 相关的内容，请换个关键词搜索</p>")
+                }
             }
             else if(datas[k].JGFL=="历史吉林"){
                 $(".content ul").append("<li class='msgtext'><h4>"+datas[k].NAME+"</h4><p>"+datas[k].FBRIEF+"</p><div><a href='history_culture_details.html?ID="+datas[k].ID+"'>history_culture_details.html?ID"+datas[k].ID+"</a><span>"+datas[k].TIME+"</span></div></li>")
                 // $(".part1 ul li:nth-child(8)").find("u").html(datas.length);
-                $(".top2>span u").html($(".part1 ul li.active span>u").html());
+                $(".top2>span u").html(datas.length);
+                var lens=datas.length
+                if(lens==""){
+                    $(".content").prepend("<p style='text-align: center'>对不起没有找到与 '"+key6+"' 相关的内容，请换个关键词搜索</p>")
+                }
             }
 
         }
