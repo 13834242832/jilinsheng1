@@ -5,6 +5,7 @@ function checkUsername(){
     var reg3=/[a-zA-Z]+/;
     var reg4=/[_]+/
     var reg5= /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+    var regarr=["163.com","10086.cn","sohu.com","qq.com","189.cn","126.com","sina.com","outlook.com","aliyun.com","foxmail.com","yeah.net"]
     var username=$("#username").val();
     var usermail=$("#usermail").val();
     var userpwd=$("#userpwd").val();
@@ -51,8 +52,13 @@ function checkUsername(){
             arr.umail=0;
         }
         else if(reg5.test(val)){
-            $(this).parent().next().css("display","none");
-            arr.umail=1;
+            var realval= val.split('@')[1];
+            realval = realval.toLowerCase();
+            regarr.indexOf(realval);
+            if(regarr.indexOf(realval)!=-1){
+                $(this).parent().next().css("display","none");
+                arr.umail=1;
+            }
         }
         else{
             $(this).parent().next().css("display","block").html("邮箱不符合规定！");
@@ -165,7 +171,7 @@ function checkUsername(){
             }
             else if(a!=-1){
                 $("#sub").attr("disabled","true");
-                return
+                return;
             }
             function pinfo(key,val){
                 if(val){
