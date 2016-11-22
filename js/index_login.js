@@ -45,7 +45,7 @@ $("#sub").on('click',function(){
                 document.cookie=name+'='+encodeURIComponent(value)+';expires='+oDate;
             }
             setCookie("name",name,7);
-            if(data["sql1"].FSTATUS=="启用"){
+            if(data["sql2"].FSTATUS=="启用"){
                 layer.alert("登录成功，返回上一级页面！",{icon: 1},function () {
                     var reg=/register/;
                     if(reg.test(parent.location.href)){
