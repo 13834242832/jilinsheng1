@@ -160,9 +160,10 @@ function checkUsername(){
                     }
                 });
                 function success_jsonpCallback(data){
+                    console.log(mail)
                     if(data["state"]=="success"){
                         layer.alert("注册成功！",{icon:1},function(){
-                            location.href="index_register_next.html"
+                            location.href="index_register_next.html?mail="+mail
                         });
                     }else{
                         layer.alert("注册失败！用户名已存在！",{icon:0});
