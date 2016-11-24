@@ -106,6 +106,7 @@ $(".content").delegate("#submit",'click',function(){
         }
     });
     function success_jsonpCallback(data){
+        console.log();
         if(data.state=="fail"){
             layer.alert(data.message,{icon:0});
         }
@@ -121,31 +122,26 @@ $(".content").delegate("#submit",'click',function(){
                 ,btn: ['确认']
                 ,btnAlign:'a'
                 ,moveType: 1 //拖拽模式，0或者1
-                ,content: '<div style="padding:50px;"><p>尊敬的tom，您已成功预约参展预约信息已发送至您的邮箱123123132@qq.com具体信息如下：</p>' +
+                ,content: '<div style="padding:50px;"><p>尊敬的'+data["sql1"][0].FWEBUSERNAME+'，您已成功预约参展预约信息已发送至您的邮箱'+data["sql1"][0].EMAIL+'具体信息如下：</p>' +
                 '<table>' +
-                '<tbody>' +
+                '<tbody class="list_r">' +
                 '<tr>' +
                 '<td>预约地点：</td><td></td>' +
                 '<td>预约时间：</td><td></td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>预约人1：</td><td></td>' +
-                '<td>预约码：</td><td></td>' +
-                '</tr>' +
                 '</tbody>' +
                 '</table>' +
                 '</div>'
-                ,success: function(layero){
-                    // var btn = layero.find('.layui-layer-btn');
-                    // btn.find('.layui-layer-btn0').attr({
-                    //     href: 'http://www.layui.com/'
-                    //     ,target: '_blank'
-                    // });
+                ,success:function(layero){
+                    var btn=layero;
+                    for(var k in data["sql2"]){
+                        btn.find(".list_r").append("<tr><td>预约人：</td><td>"+data["sql2"][k].FNAME+"</td><td>预约码：</td><td>"+data["sql2"][k].FELECOUPON+"</td></tr>' ")
+                    }
                 }
             });
         }
     }
 })
+
 function getCookie(name){
     /* 获取浏览器所有cookie将其拆分成数组 */
     var arr=document.cookie.split('; ');

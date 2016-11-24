@@ -160,9 +160,9 @@ function checkUsername(){
                     }
                 });
                 function success_jsonpCallback(data){
-                    console.log(mail)
-                    if(data["state"]=="success"){
-                        layer.alert("注册成功！",{icon:1},function(){
+                    console.log(data);
+                    if(data["state"]=="nonactivated"){
+                        layer.alert(""+data["message"],{icon:1},function(){
                             location.href="index_register_next.html?mail="+mail
                         });
                     }else{

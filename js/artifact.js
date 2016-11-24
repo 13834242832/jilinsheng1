@@ -26,6 +26,24 @@ $(".bottom .time u").attr("class"," ");
 //关键字
 var key6=decodeURI(location.search.split("&")[3].split("=")[1]);
 $(function(){
+    $.ajax({
+        type:'post',
+        url:"http://123.56.50.236:8080/x5/TJBWG/Content/process/processor/HotWP.j",
+        async:false,
+        dataType:'JSONP',
+        jsonp: "jsoncallback",
+        jsonpCallback:"success_jsonpCallback",
+        success:function(json){
+            success_jsonpCallback(json);
+            function success_jsonpCallback(data){
+                console.log(data);
+                for(var k in data["sql1"]){
+                    $(".tablelist ul li").eq(k).find("a").attr("href","artifact_details.html?ID="+data["sql1"][k].FGUID).html(data["sql1"][k].FPRODUCTNAME)
+                }
+            }
+        }
+    });
+
     //点击搜索
     function search(key6) {
         var result={

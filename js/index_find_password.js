@@ -21,15 +21,12 @@ window.onload = function createCode(){
 function validate(){
     var inputCode = document.getElementById("code").value.toUpperCase(); //取得输入的验证码并转化为大写
     if(inputCode.length <= 0) { //若输入的验证码长度为0
-        alert("请输入验证码！"); //则弹出请输入验证码
+        layer.alert("请输入验证码！",{icon:0}); //则弹出请输入验证码
     }
     else if(inputCode != code ) { //若输入的验证码与产生的验证码不一致时
-        alert("验证码输入错误！@_@"); //则弹出验证码输入错误
+        layer.alert("验证码输入错误！",{icon:0}); //则弹出验证码输入错误
         createCode();//刷新验证码
         document.getElementById("code").value = "";//清空文本框
-    }
-    else { //输入正确时
-        alert("输入正确"); //弹出^-^
     }
 }
 //密码
@@ -86,12 +83,14 @@ $("#umail").on("focus",function(){
     var val=$(this).val();
     if(val.length==0){
         $(this).parent().next().css("display","block").html("邮箱不能为空！");
+        $(".btn1").attr("disabled","true");
     }
 })
 $("#umail").bind("input propertychange",function(){
     var val=$(this).val();
     if(val.length==0){
         $(this).parent().next().css("display","block").html("邮箱不能为空！");
+        $(".btn1").attr("disabled","true");
     }
     else if(reg5.test(val)){
         var realval= val.split('@')[1];
@@ -99,18 +98,21 @@ $("#umail").bind("input propertychange",function(){
         regarr.indexOf(realval);
         if(regarr.indexOf(realval)!=-1){
             $(this).parent().next().css("display","none");
+            $(".btn1").removeAttr("disabled");
         }
     }
     else{
         $(this).parent().next().css("display","block").html("邮箱不符合规定！");
+        $(".btn1").attr("disabled","true");
     }
 })
 function getcode(){
     var val=$("#umail").val();
     $(".secondstep p u").html(val);
     var result={
-        mail:val
+        "mail":val
     };
+    result=JSON.stringify(result);
     $.ajax({
         type:'post',
         url:"http://123.56.50.236:8080/x5/TJBWG/Content/process/processor/getcode.j",
@@ -123,31 +125,76 @@ function getcode(){
         }
     });
     function success_jsonpCallback(data){
-    }
-}
-function updatepassword(){
-    var result={
-        pwd:$("#qrpwd").val(),
-        mail:$("#umail").val()
-    }
-    $.ajax({
-        type:'post',
-        url:"http://123.56.50.236:8080/x5/TJBWG/Content/process/processor/updatepassword.j",
-        dataType:'JSONP',
-        jsonp: "jsoncallback",
-        jsonpCallback:"success_jsonpCallback",
-        data:{"params":result},
-        success:function(json){
-            success_jsonpCallback(json);
-        }
-    });
-    function success_jsonpCallback(data){
-        if(data["state"]=="success"){
-            layer.alert("注册成功！",{icon:1},function(){
-                location.href="index_register_next.html"
+        if(data.state=="success"){
+            setCookie("code",data.code,1);
+            layer.alert(""+data.message,{icon:1},function(){
+                $(".btn2").removeAttr("disabled");
             });
         }else{
-            layer.alert("注册失败！用户名已存在！",{icon:0});
+            layer.alert(""+data.message,{icon:0});
         }
     }
+}
+function checkcode(){
+    var code=$("#yzcode").val();
+    console.log(code);
+    var codesend=getCookie("code");
+    if(code==" "){
+        layer.alert("请输入验证码！",{icon:0},function(){
+            $(".btn2").attr("disabled","true");
+        });
+    }else if(code==codesend){
+        layer.alert("验证码正确！",{icon:1},function(){
+            $(".btn1").removeAttr("disabled");
+        });
+    }else{
+        layer.alert("验证码错误！",{icon:0},function(){
+            $(".btn2").attr("disabled","true");
+        });
+    }
+
+}
+function updatepassword(){
+        var result={
+            "pwd":$("#qrpwd").val(),
+            "mail":$("#umail").val()
+        }
+        result=JSON.stringify(result);
+        $.ajax({
+            type:'post',
+            url:"http://123.56.50.236:8080/x5/TJBWG/Content/process/processor/updatepassword.j",
+            dataType:'JSONP',
+            jsonp: "jsoncallback",
+            jsonpCallback:"success_jsonpCallback",
+            data:{"params":result},
+            success:function(json){
+                success_jsonpCallback(json);
+            }
+        });
+        function success_jsonpCallback(data){
+            if(data["state"]=="success"){
+                layer.alert(""+data.message,{icon:1},function(){
+
+                });
+            }else{
+                layer.alert(""+data.message,{icon:0});
+            }
+        }
+}
+function setCookie(name, value, iDay){
+    var oDate=new Date();
+    oDate.setDate(oDate.getDate()+iDay);
+    document.cookie=name+'='+encodeURIComponent(value)+';expires='+oDate;
+}
+function getCookie(name){
+    /* 获取浏览器所有cookie将其拆分成数组 */
+    var arr=document.cookie.split('; ');
+    for(var i=0;i<arr.length;i++)    {
+        /* 将cookie名称和值拆分进行判断 */
+        var arr2=arr[i].split('=');
+        if(arr2[0]==name){
+            return arr2[1];
+        }
+    }
+    return '';
 }
