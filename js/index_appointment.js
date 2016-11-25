@@ -59,7 +59,7 @@ $("tbody .id").bind("input propertychange",function(){
     }
 
 });
-$("#LAY_layuipro").css("height","448px")
+
 //post发送的数据
 $(".content").delegate("#submit",'click',function(){
     var a=$("#museum option:selected").html();
@@ -122,26 +122,27 @@ $(".content").delegate("#submit",'click',function(){
                 ,btn: ['确认']
                 ,btnAlign:'a'
                 ,moveType: 1 //拖拽模式，0或者1
-                ,content: '<div style="padding:50px;"><p>尊敬的'+data["sql1"][0].FWEBUSERNAME+'，您已成功预约参展预约信息已发送至您的邮箱'+data["sql1"][0].EMAIL+'具体信息如下：</p>' +
-                '<table>' +
+                ,content: '<div style="height:348px; padding:50px;background:#393height:348px;padding:50px;background:#393D49; line-height: 22px;font-size:16px;color:#eee"><p>尊敬的'+data["sql1"][0].FWEBUSERNAME+'，您已成功预约参展预约信息已发送至您的邮箱'+data["sql1"][0].EMAIL+'具体信息如下：</p>' +
+                '<table style="margin-top:20px">' +
                 '<tbody class="list_r">' +
-                '<tr>' +
-                '<td>预约地点：</td><td></td>' +
-                '<td>预约时间：</td><td></td>' +
+                '<tr style="line-height:60px">' +
+                '<td>预约地点：</td><td>'+data["sql1"][0].FMUSEUM+'</td>' +
+                '<td>预约时间：</td><td>'+data["sql1"][0].FVISITINGTIME+'</td>' +
+                    '</tr>'+
                 '</tbody>' +
                 '</table>' +
                 '</div>'
                 ,success:function(layero){
                     var btn=layero;
                     for(var k in data["sql2"]){
-                        btn.find(".list_r").append("<tr><td>预约人：</td><td>"+data["sql2"][k].FNAME+"</td><td>预约码：</td><td>"+data["sql2"][k].FELECOUPON+"</td></tr>' ")
+                        btn.find(".list_r").append("<tr style='line-height:60px'><td>预约人：</td><td>"+data["sql2"][k].FNAME+"</td><td>预约码：</td><td>"+data["sql2"][k].FELECOUPON+"</td></tr>' ")
                     }
                 }
             });
         }
     }
 })
-
+$("#LAY_layuipro").css("height","448px")
 function getCookie(name){
     /* 获取浏览器所有cookie将其拆分成数组 */
     var arr=document.cookie.split('; ');

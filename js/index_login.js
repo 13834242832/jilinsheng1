@@ -55,9 +55,13 @@ $("#sub").on('click',function(){
                     }
                 });
 
+            }else{
+                layer.alert("帐号未激活！",{icon: 0},function () {
+                    location.href="index_register_next.html";
+                });
             }
         }else{
-            layer.alert("用户名或者密码错误！",{icon: 1});
+            layer.alert("用户名或者密码错误！",{icon: 0});
         }
      }
 })

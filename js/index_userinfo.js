@@ -35,6 +35,7 @@ function getuserinfo(){
                 $(".idnum").html(datas["sql1"][0].FIDCARD);
                 $(".sex").html(datas["sql1"][0].FSEX);
                 $(".label1").html(datas["sql1"][0].FLABLE);
+                checkpwd(datas["sql1"][0].FPASSWORD);
                 $("input[name='sname']").val($(".sname").html());
                 $("input[name='usermail']").val($(".usermail").html());
                 $("input[name='realname']").val($(".realname").html());
@@ -147,8 +148,6 @@ $(".pwd").on("click",function(){
     $(".usersafe").hide();
     $(".usersafe_xg").show();
 })
-
-checkpwd("123465789");
 //检查密码
 function checkpwd(pwd) {
     if(/[a-zA-Z]+/.test(pwd) || /[0-9]+/.test(pwd)){

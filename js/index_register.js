@@ -160,7 +160,6 @@ function checkUsername(){
                     }
                 });
                 function success_jsonpCallback(data){
-                    console.log(data);
                     if(data["state"]=="nonactivated"){
                         layer.alert(""+data["message"],{icon:1},function(){
                             location.href="index_register_next.html?mail="+mail
@@ -184,5 +183,5 @@ function checkUsername(){
 }
 checkUsername();
 $(".login").on("click",function(){
-    location.href="index_login.html"
+    location.href="index_login.html#register"
 })

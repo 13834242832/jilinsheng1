@@ -21,7 +21,7 @@
     <div class="content">
         <p><span>恭喜</span>，您已经成功注册成为吉林数字博物馆在线服务平台用户</p>
         <h4>请即刻开始您的漫游之旅吧！</h4>
-        <div><button>返回首页</button></div>
+        <div><button class="btn1">返回首页</button></div>
     </div>
 </div>
 <div id="footer"></div>
@@ -30,6 +30,9 @@
 <script>
     $("#header").load("include/head.html");
     $("#footer").load("include/footer.html");
+    $(".btn1").on("click",function(){
+        location.href="index.html"
+    })
 </script>
 </body>
 </html>

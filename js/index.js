@@ -52,7 +52,7 @@ $.ajax({
     success:function(json){
         var datas=eval("("+json+")");
         for(var k in datas){
-            $("#map").append("<div data-level='"+datas[k].FMLEVEL+"' class='point' id='"+datas[k].MID+"' style='left:"+datas[k].FLONGITUDE+"px;top:"+datas[k].FLATITUDE+"px'><p><span>"+datas[k].FMUSEUMNAME+"</span><u class='ums'>"+datas[k].NUM+"<i id='total'></i>件藏品</u></p></div>");
+            $("#map").append("<div data-level='"+datas[k].FMLEVEL+"' class='point' id='"+datas[k].MID+"' style='left:"+datas[k].FLONGITUDE+"px;top:"+datas[k].FLATITUDE+"px'><p><span>"+datas[k].FMUSEUMNAME+"</span><u class='ums'><i id='total'>"+datas[k].NUM+"件藏品</i></u></p></div>");
         }
         $("[data-level='一级博物馆']").addClass("level1");
         $("[data-level='二级博物馆']").addClass("level2");

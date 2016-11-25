@@ -1,11 +1,11 @@
-$(".btn").on("click",function(){
-    var index=parseInt($(this).attr("class").split(" ")[1].slice(3,4))+1;
-    $(".state ul li:nth-child("+index+")").addClass("active").siblings().removeClass("active")
-    $(this).parent().hide().next().show()
-})
+// $(".btn").on("click",function(){
+//     var index=parseInt($(this).attr("class").split(" ")[1].slice(3,4))+1;
+//     $(".state ul li:nth-child("+index+")").addClass("active").siblings().removeClass("active")
+//     $(this).parent().hide().next().show()
+// })
 var code ; //在全局定义验证码
 //产生验证码
-window.onload = function createCode(){
+function createCode(e){
     code = "";
     var codeLength = 4;//验证码的长度
     var checkCode = document.getElementById("val");
@@ -17,18 +17,50 @@ window.onload = function createCode(){
     }
     checkCode.value = code;//把code值赋给验证码
 }
+createCode();
 //校验验证码
 function validate(){
     var inputCode = document.getElementById("code").value.toUpperCase(); //取得输入的验证码并转化为大写
     if(inputCode.length <= 0) { //若输入的验证码长度为0
-        layer.alert("请输入验证码！",{icon:0}); //则弹出请输入验证码
+        // layer.alert("请输入验证码！",{icon:0},function(){
+            return '0'
+        // }); //则弹出请输入验证码
     }
-    else if(inputCode != code ) { //若输入的验证码与产生的验证码不一致时
-        layer.alert("验证码输入错误！",{icon:0}); //则弹出验证码输入错误
-        createCode();//刷新验证码
-        document.getElementById("code").value = "";//清空文本框
+    else if(inputCode.length > 0&&inputCode != code ) { //若输入的验证码与产生的验证码不一致时
+        // layer.alert("验证码输入错误！",{icon:0},function(){
+            return "1"
+        // }); //则弹出验证码输入错误
+    }else{
+        return "2"
     }
 }
+$(".btn1").on("click",function(){
+    validate();
+    if(validate()=="2"){
+        $(".state ul li:nth-child(2)").addClass("active").siblings().removeClass("active");
+        $(this).parent().hide().next().show();
+        getcode();
+    }else if(validate()==="1"){
+        layer.alert("验证码输入错误！",{icon:0})
+        createCode();//刷新验证码
+        document.getElementById("code").value = "";//清空文本框
+    }else{
+        layer.alert("请输入验证码！",{icon:0})
+    }
+})
+$(".btn2").on("click",function(){
+    checkcode();
+    if(checkcode()==="0"){
+        layer.alert("请输入验证码！",{icon:0});
+    }else if(checkcode()==="1"){
+        $(".state ul li:nth-child(3)").addClass("active").siblings().removeClass("active");
+        $(this).parent().hide().next().show();
+    }else{
+        layer.alert("验证码错误！",{icon:0});
+    }
+})
+
+
 //密码
 $("#newpwd").on("focus",function(){
     var val=$(this).val();
@@ -65,14 +97,17 @@ $("#qrpwd").on("focus",function(){
 })
 $("#qrpwd").bind("input propertychange",function(){
     var val=$(this).val();
-    var pwd=$("#userpwd").val()
+    var pwd=$("#newpwd").val()
     if(val.length==0){
         $(this).parent().next().css("display","block").html("再次输入密码不能为空！");
+        $(".btn3").attr("disabled","true");
     }
     else if(val==pwd){
         $(this).parent().next().css("display","none");
+        $(".btn3").removeAttr("disabled");
     }else{
         $(this).parent().next().css("display","block").html("两次的输入不一致！");
+        $(".btn3").attr("disabled","true");
     }
 
 })
@@ -83,14 +118,12 @@ $("#umail").on("focus",function(){
     var val=$(this).val();
     if(val.length==0){
         $(this).parent().next().css("display","block").html("邮箱不能为空！");
-        $(".btn1").attr("disabled","true");
     }
 })
 $("#umail").bind("input propertychange",function(){
     var val=$(this).val();
     if(val.length==0){
         $(this).parent().next().css("display","block").html("邮箱不能为空！");
-        $(".btn1").attr("disabled","true");
     }
     else if(reg5.test(val)){
         var realval= val.split('@')[1];
@@ -98,12 +131,10 @@ $("#umail").bind("input propertychange",function(){
         regarr.indexOf(realval);
         if(regarr.indexOf(realval)!=-1){
             $(this).parent().next().css("display","none");
-            $(".btn1").removeAttr("disabled");
         }
     }
     else{
         $(this).parent().next().css("display","block").html("邮箱不符合规定！");
-        $(".btn1").attr("disabled","true");
     }
 })
 function getcode(){
@@ -127,30 +158,22 @@ function getcode(){
     function success_jsonpCallback(data){
         if(data.state=="success"){
             setCookie("code",data.code,1);
-            layer.alert(""+data.message,{icon:1},function(){
-                $(".btn2").removeAttr("disabled");
-            });
+            $(".btn2").removeAttr("disabled");
         }else{
             layer.alert(""+data.message,{icon:0});
+            location.reload()
         }
     }
 }
 function checkcode(){
     var code=$("#yzcode").val();
-    console.log(code);
     var codesend=getCookie("code");
     if(code==" "){
-        layer.alert("请输入验证码！",{icon:0},function(){
-            $(".btn2").attr("disabled","true");
-        });
+        return "0"
     }else if(code==codesend){
-        layer.alert("验证码正确！",{icon:1},function(){
-            $(".btn1").removeAttr("disabled");
-        });
+        return "1"
     }else{
-        layer.alert("验证码错误！",{icon:0},function(){
-            $(".btn2").attr("disabled","true");
-        });
+        return "2"
     }
 
 }
@@ -173,9 +196,9 @@ function updatepassword(){
         });
         function success_jsonpCallback(data){
             if(data["state"]=="success"){
-                layer.alert(""+data.message,{icon:1},function(){
-
-                });
+                layer.alert(""+data.message,{icon:1})
+                    $(".state ul li:nth-child(4)").addClass("active").siblings().removeClass("active");
+                    $(".btn3").parent().hide().next().show();
             }else{
                 layer.alert(""+data.message,{icon:0});
             }

@@ -354,6 +354,8 @@ z-index: 20;
     border-bottom:1px solid #e7dbb6;
 }
 .point p .ums{
+    display:inline-block;
+    width:auto;
     text-decoration: none;
     font-size:12px;
     position:relative;
