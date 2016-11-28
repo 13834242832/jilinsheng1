@@ -57,7 +57,7 @@ $("#sub").on('click',function(){
 
             }else{
                 layer.alert("帐号未激活！",{icon: 0},function () {
-                    location.href="index_register_next.html";
+                    location.href="index_register_next.html?mail="+data["sql2"][0].EMAIL;
                 });
             }
         }else{

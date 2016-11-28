@@ -15,6 +15,7 @@ $(".btn1").click(function () {
 //功能：根据用户输入的Email跳转到相应的电子邮箱首页
 function gotoEmail($mail) {
     var mail = $mail.split('@')[1];
+    console.log(mail);
     $t = mail.toLowerCase();
     if ($t == '163.com') {
         return 'mail.163.com';
