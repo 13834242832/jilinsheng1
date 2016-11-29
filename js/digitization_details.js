@@ -377,7 +377,6 @@ $(function(){
                 }
             }
         });
-
     }
     getmsg()
 

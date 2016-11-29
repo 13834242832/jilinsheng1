@@ -31,6 +31,7 @@ $(function(){
             });
         }
     });
+    //推荐三维藏品
     $.ajax({
         type:'GET',
         url:"data/digitization/3d.json",
@@ -48,21 +49,14 @@ $(function(){
         }
 
     });
+    //镇馆之宝
     $.ajax({
         type:'GET',
         url:"data/appreciate/treasure.json",
         dataType:"text",
         success:function(json){
             var datas=eval("("+json+")");
-            var data=datas;
-            var len=data.length;
             var limit=12;
-            $(".pager").pager({
-                pageIndex:0,
-                pageSize:limit,
-                itemCount:len,
-                maxButtonCount:4,
-            });
             $(".img_list").html(" ");
             for(var i=0;i<limit;i++){
                 if(datas[i]) {
